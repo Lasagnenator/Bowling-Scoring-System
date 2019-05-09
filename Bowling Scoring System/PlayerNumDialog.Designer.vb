@@ -71,7 +71,7 @@ Partial Class PlayerNumDialog
         Me.Name = "PlayerNumDialog"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Dialog1"
+        Me.Text = "Number of Players"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
