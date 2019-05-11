@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
@@ -36,9 +36,17 @@ Partial Class Form1
         Me.RadioButton12 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Player1 = New System.Windows.Forms.Panel()
-        Me.Player2 = New System.Windows.Forms.Panel()
-        Me.Player3 = New System.Windows.Forms.Panel()
-        Me.Player4 = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox9 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox10 = New System.Windows.Forms.RichTextBox()
+        Me.Player1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadioButton1
@@ -176,40 +184,118 @@ Partial Class Form1
         '
         'Player1
         '
+        Me.Player1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Player1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Player1.Controls.Add(Me.RichTextBox10)
+        Me.Player1.Controls.Add(Me.RichTextBox9)
+        Me.Player1.Controls.Add(Me.RichTextBox8)
+        Me.Player1.Controls.Add(Me.RichTextBox7)
+        Me.Player1.Controls.Add(Me.RichTextBox6)
+        Me.Player1.Controls.Add(Me.RichTextBox5)
+        Me.Player1.Controls.Add(Me.RichTextBox4)
+        Me.Player1.Controls.Add(Me.RichTextBox3)
+        Me.Player1.Controls.Add(Me.RichTextBox2)
+        Me.Player1.Controls.Add(Me.RichTextBox1)
         Me.Player1.Location = New System.Drawing.Point(13, 13)
         Me.Player1.Name = "Player1"
         Me.Player1.Size = New System.Drawing.Size(949, 100)
         Me.Player1.TabIndex = 13
         '
-        'Player2
+        'RichTextBox1
         '
-        Me.Player2.Location = New System.Drawing.Point(13, 120)
-        Me.Player2.Name = "Player2"
-        Me.Player2.Size = New System.Drawing.Size(949, 100)
-        Me.Player2.TabIndex = 14
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox1.Location = New System.Drawing.Point(-1, -1)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = ""
         '
-        'Player3
+        'RichTextBox2
         '
-        Me.Player3.Location = New System.Drawing.Point(13, 227)
-        Me.Player3.Name = "Player3"
-        Me.Player3.Size = New System.Drawing.Size(949, 100)
-        Me.Player3.TabIndex = 15
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox2.Location = New System.Drawing.Point(87, -1)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox2.TabIndex = 1
+        Me.RichTextBox2.Text = ""
         '
-        'Player4
+        'RichTextBox3
         '
-        Me.Player4.Location = New System.Drawing.Point(13, 334)
-        Me.Player4.Name = "Player4"
-        Me.Player4.Size = New System.Drawing.Size(949, 100)
-        Me.Player4.TabIndex = 16
+        Me.RichTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox3.Location = New System.Drawing.Point(175, -1)
+        Me.RichTextBox3.Name = "RichTextBox3"
+        Me.RichTextBox3.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox3.TabIndex = 14
+        Me.RichTextBox3.Text = ""
+        '
+        'RichTextBox4
+        '
+        Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox4.Location = New System.Drawing.Point(263, -1)
+        Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox4.TabIndex = 15
+        Me.RichTextBox4.Text = ""
+        '
+        'RichTextBox5
+        '
+        Me.RichTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox5.Location = New System.Drawing.Point(349, -1)
+        Me.RichTextBox5.Name = "RichTextBox5"
+        Me.RichTextBox5.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox5.TabIndex = 16
+        Me.RichTextBox5.Text = ""
+        '
+        'RichTextBox6
+        '
+        Me.RichTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox6.Location = New System.Drawing.Point(427, -1)
+        Me.RichTextBox6.Name = "RichTextBox6"
+        Me.RichTextBox6.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox6.TabIndex = 17
+        Me.RichTextBox6.Text = ""
+        '
+        'RichTextBox7
+        '
+        Me.RichTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox7.Location = New System.Drawing.Point(515, -1)
+        Me.RichTextBox7.Name = "RichTextBox7"
+        Me.RichTextBox7.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox7.TabIndex = 18
+        Me.RichTextBox7.Text = ""
+        '
+        'RichTextBox8
+        '
+        Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox8.Location = New System.Drawing.Point(597, -1)
+        Me.RichTextBox8.Name = "RichTextBox8"
+        Me.RichTextBox8.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox8.TabIndex = 19
+        Me.RichTextBox8.Text = ""
+        '
+        'RichTextBox9
+        '
+        Me.RichTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox9.Location = New System.Drawing.Point(685, -1)
+        Me.RichTextBox9.Name = "RichTextBox9"
+        Me.RichTextBox9.Size = New System.Drawing.Size(93, 100)
+        Me.RichTextBox9.TabIndex = 20
+        Me.RichTextBox9.Text = ""
+        '
+        'RichTextBox10
+        '
+        Me.RichTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox10.Location = New System.Drawing.Point(775, -1)
+        Me.RichTextBox10.Name = "RichTextBox10"
+        Me.RichTextBox10.Size = New System.Drawing.Size(173, 100)
+        Me.RichTextBox10.TabIndex = 21
+        Me.RichTextBox10.Text = ""
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(974, 679)
-        Me.Controls.Add(Me.Player4)
-        Me.Controls.Add(Me.Player3)
-        Me.Controls.Add(Me.Player2)
         Me.Controls.Add(Me.Player1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RadioButton12)
@@ -228,6 +314,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Bowling Scoring System"
+        Me.Player1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -247,7 +334,14 @@ Partial Class Form1
     Friend WithEvents RadioButton12 As RadioButton
     Friend WithEvents Button1 As Button
     Friend WithEvents Player1 As Panel
-    Friend WithEvents Player2 As Panel
-    Friend WithEvents Player3 As Panel
-    Friend WithEvents Player4 As Panel
+    Friend WithEvents RichTextBox10 As RichTextBox
+    Friend WithEvents RichTextBox9 As RichTextBox
+    Friend WithEvents RichTextBox8 As RichTextBox
+    Friend WithEvents RichTextBox7 As RichTextBox
+    Friend WithEvents RichTextBox6 As RichTextBox
+    Friend WithEvents RichTextBox5 As RichTextBox
+    Friend WithEvents RichTextBox4 As RichTextBox
+    Friend WithEvents RichTextBox3 As RichTextBox
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

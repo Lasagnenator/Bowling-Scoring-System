@@ -38,6 +38,7 @@ Partial Class PlayerNumDialog
         '
         'PlayerNumbers
         '
+        Me.PlayerNumbers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PlayerNumbers.FormattingEnabled = True
         Me.PlayerNumbers.ItemHeight = 25
         Me.PlayerNumbers.Items.AddRange(New Object() {"1", "2", "3", "4"})
