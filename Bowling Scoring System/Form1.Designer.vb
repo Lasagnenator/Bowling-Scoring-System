@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -46,6 +47,8 @@ Partial Class Form1
         Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox9 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox10 = New System.Windows.Forms.RichTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Player1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -196,7 +199,7 @@ Partial Class Form1
         Me.Player1.Controls.Add(Me.RichTextBox3)
         Me.Player1.Controls.Add(Me.RichTextBox2)
         Me.Player1.Controls.Add(Me.RichTextBox1)
-        Me.Player1.Location = New System.Drawing.Point(13, 13)
+        Me.Player1.Location = New System.Drawing.Point(12, 41)
         Me.Player1.Name = "Player1"
         Me.Player1.Size = New System.Drawing.Size(949, 100)
         Me.Player1.TabIndex = 13
@@ -206,6 +209,7 @@ Partial Class Form1
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox1.Location = New System.Drawing.Point(-1, -1)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
@@ -215,6 +219,7 @@ Partial Class Form1
         Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox2.Location = New System.Drawing.Point(87, -1)
         Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox2.TabIndex = 1
         Me.RichTextBox2.Text = ""
@@ -224,6 +229,7 @@ Partial Class Form1
         Me.RichTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox3.Location = New System.Drawing.Point(175, -1)
         Me.RichTextBox3.Name = "RichTextBox3"
+        Me.RichTextBox3.ReadOnly = True
         Me.RichTextBox3.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox3.TabIndex = 14
         Me.RichTextBox3.Text = ""
@@ -233,6 +239,7 @@ Partial Class Form1
         Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox4.Location = New System.Drawing.Point(263, -1)
         Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.ReadOnly = True
         Me.RichTextBox4.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox4.TabIndex = 15
         Me.RichTextBox4.Text = ""
@@ -242,6 +249,7 @@ Partial Class Form1
         Me.RichTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox5.Location = New System.Drawing.Point(349, -1)
         Me.RichTextBox5.Name = "RichTextBox5"
+        Me.RichTextBox5.ReadOnly = True
         Me.RichTextBox5.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox5.TabIndex = 16
         Me.RichTextBox5.Text = ""
@@ -251,6 +259,7 @@ Partial Class Form1
         Me.RichTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox6.Location = New System.Drawing.Point(427, -1)
         Me.RichTextBox6.Name = "RichTextBox6"
+        Me.RichTextBox6.ReadOnly = True
         Me.RichTextBox6.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox6.TabIndex = 17
         Me.RichTextBox6.Text = ""
@@ -260,6 +269,7 @@ Partial Class Form1
         Me.RichTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox7.Location = New System.Drawing.Point(515, -1)
         Me.RichTextBox7.Name = "RichTextBox7"
+        Me.RichTextBox7.ReadOnly = True
         Me.RichTextBox7.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox7.TabIndex = 18
         Me.RichTextBox7.Text = ""
@@ -269,6 +279,7 @@ Partial Class Form1
         Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox8.Location = New System.Drawing.Point(597, -1)
         Me.RichTextBox8.Name = "RichTextBox8"
+        Me.RichTextBox8.ReadOnly = True
         Me.RichTextBox8.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox8.TabIndex = 19
         Me.RichTextBox8.Text = ""
@@ -278,6 +289,7 @@ Partial Class Form1
         Me.RichTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox9.Location = New System.Drawing.Point(685, -1)
         Me.RichTextBox9.Name = "RichTextBox9"
+        Me.RichTextBox9.ReadOnly = True
         Me.RichTextBox9.Size = New System.Drawing.Size(93, 100)
         Me.RichTextBox9.TabIndex = 20
         Me.RichTextBox9.Text = ""
@@ -287,15 +299,34 @@ Partial Class Form1
         Me.RichTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RichTextBox10.Location = New System.Drawing.Point(775, -1)
         Me.RichTextBox10.Name = "RichTextBox10"
+        Me.RichTextBox10.ReadOnly = True
         Me.RichTextBox10.Size = New System.Drawing.Size(173, 100)
         Me.RichTextBox10.TabIndex = 21
         Me.RichTextBox10.Text = ""
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(91, 25)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Player 1"
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon1.BalloonTipText = "Hi"
+        Me.NotifyIcon1.BalloonTipTitle = "Test"
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(974, 679)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Player1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RadioButton12)
@@ -344,4 +375,6 @@ Partial Class Form1
     Friend WithEvents RichTextBox3 As RichTextBox
     Friend WithEvents RichTextBox2 As RichTextBox
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class
