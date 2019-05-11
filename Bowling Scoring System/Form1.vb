@@ -1,7 +1,8 @@
 ﻿Public Class Form1
     Dim CurrentPlayer As Integer = 0
     Public TotalPlayers As Integer
-    Dim Scores(,) As Integer
+    Dim CurrentFrame As Integer = 0
+    Dim Scores As Integer(,)
     Private Enum ValidScores
         Miss
         One
@@ -51,6 +52,10 @@
         End If
     End Sub
     Public Sub AddScore(ByVal Score As Integer)
+        Scores(CurrentPlayer, CurrentFrame) = Score
+        UpdateScores(CurrentPlayer)
+    End Sub
+    Public Sub UpdateScores(Player As Integer)
 
     End Sub
 End Class
