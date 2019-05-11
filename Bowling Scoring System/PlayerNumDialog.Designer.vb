@@ -38,6 +38,7 @@ Partial Class PlayerNumDialog
         '
         'PlayerNumbers
         '
+        Me.PlayerNumbers.DisplayMember = "0"
         Me.PlayerNumbers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PlayerNumbers.FormattingEnabled = True
         Me.PlayerNumbers.ItemHeight = 25
