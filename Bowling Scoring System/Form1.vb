@@ -1,7 +1,9 @@
 ﻿Public Class Form1
     Public CurrentPlayer As Integer = 0
     Public TotalPlayers As Integer
-    Public CurrentBowl As Integer = 0
+    Public CurrentFrame As Integer = 0 'Current frame number
+    Public CurrentBowl As Integer = 0 'Where we are in the Scores variable horizontally
+    Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
     Public Scores As Integer(,) = New Integer(3, 20) {} 'Make the array 4x21 (max scores x players) and Initialise with zeros
     Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 10) {}
     Public Enum ValidScores
@@ -77,17 +79,39 @@
     End Sub
     Public Sub AddScore(ByVal Score As Integer)
         Scores(CurrentPlayer, CurrentBowl) = Score
-        If Score = ValidScores.Strike Then
-
+        If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl
+            CurrentBowl += 1
+            Scores(CurrentPlayer, CurrentBowl) = 0
         End If
-        DisplayScore(CurrentPlayer, 0, Scores(CurrentPlayer, 0), Scores(CurrentPlayer, 1))
-        UpdateScores(CurrentPlayer)
+        If CurrentFrameBowl = 0 Then
+            DisplayScore(CurrentPlayer, CurrentFrame, FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
+        Else
+            DisplayScore(CurrentPlayer, CurrentFrame, FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 1)), FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
+        End If
+        UpdateScores(CurrentPlayer, Score)
+        CurrentBowl += 1
     End Sub
-    Public Sub UpdateScores(Player As Integer)
-        CurrentPlayer += 1
+
+    Public Sub UpdateScores(Player As Integer, Score As Integer)
+        CurrentFrameBowl += 1
+        If Score = ValidScores.Strike Then
+            CurrentFrameBowl = 0 'It should already be zero but just making sure
+            CurrentPlayer += 1
+        End If
+        If CurrentFrameBowl > 1 Then
+            If Not CurrentFrame = 9 Then 'Not in Frame 10
+                CurrentFrameBowl = 0
+                CurrentPlayer += 1
+                CurrentBowl -= 2
+            ElseIf CurrentFrameBowl > 2 Then 'In Frame 10
+                CurrentFrameBowl = 0
+                CurrentPlayer += 1
+                CurrentBowl -= 3
+            End If
+        End If
         If CurrentPlayer >= TotalPlayers Then
             CurrentPlayer = 0
-            CurrentBowl += 1
+            CurrentFrame += 1
         End If
         If CurrentBowl > 20 Then 'This should always occur
             'Game Ended
