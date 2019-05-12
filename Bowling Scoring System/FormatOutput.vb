@@ -8,7 +8,7 @@
         'No need to use padding as each score is one character long
         If Bowl2 = "" Then                          'Strike or still on first bowl
             If Bowl1 = "X" Then                     'Strike
-                FinalString = "      X"             'Make the strike appear in the spot where bowl2 normally goes
+                FinalString = "X"             'Make the strike appear in the spot where bowl2 normally goes
             Else
                 FinalString = Bowl1                 'First bowl only
             End If
@@ -32,7 +32,7 @@
         End If
         Return FinalString
     End Function
-    Public Shared Function ScoreToText(Score As Integer) As String
+    Public Shared Function ScoreToText(ByVal Score As Integer) As String
         Select Case Score
             Case Form1.ValidScores.Miss
                 Return "-"

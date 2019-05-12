@@ -42,7 +42,7 @@
         {P1F1, P1F2, P1F3, P1F4, P1F5, P1F6, P1F7, P1F8, P1F9, P1F10}
         }
     End Sub
-    Public Sub MakePanels(num As Integer)
+    Public Sub MakePanels(ByVal num As Integer)
         For i = 0 To 4
             If i >= num Then
 
@@ -107,7 +107,7 @@
         CurrentBowl += 1
     End Sub
 
-    Public Sub UpdateScores(Player As Integer, Score As Integer)
+    Public Sub UpdateScores(ByVal Player As Integer, ByVal Score As Integer)
         CurrentFrameBowl += 1
         If Score = ValidScores.Strike Then
             If Not CurrentFrame = 9 Then 'Not in frame 10
@@ -146,7 +146,7 @@
         'P1F2.Text = FormatOutput.FormatScores("a", "b", SubTotal:="cb")
     End Sub
 
-    Public Sub DisplayScore(Player As Integer, Frame As Integer, ByVal Bowl1 As String, ByVal Optional Bowl2 As String = "", ByVal Optional Bowl3 As String = "", ByVal Optional SubTotal As String = Nothing)
+    Public Sub DisplayScore(ByVal Player As Integer, Frame As Integer, ByVal Bowl1 As String, ByVal Optional Bowl2 As String = "", ByVal Optional Bowl3 As String = "", ByVal Optional SubTotal As String = Nothing)
         Dim Score As String = FormatOutput.FormatScores(Bowl1, Bowl2, Bowl3, SubTotal)
         PlayerScoreBoxes(Player, Frame).Text = Score
     End Sub
