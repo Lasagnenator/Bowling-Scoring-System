@@ -4,7 +4,7 @@
     Public CurrentBowl As Integer = 0
     Public Scores As Integer(,) = New Integer(3, 20) {} 'Make the array 4x21 (max scores x players) and Initialise with zeros
     Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 10) {}
-    Private Enum ValidScores
+    Public Enum ValidScores
         Miss
         One
         Two
@@ -35,6 +35,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PlayerNumDialog.ShowDialog()
         'ReDim Scores(3, 20) 
+        'Initialise The PlayerScoreBoxes array
         PlayerScoreBoxes = {
         {P1F1, P1F2, P1F3, P1F4, P1F5, P1F6, P1F7, P1F8, P1F9, P1F10, Player1TotalScoreBox}
         }
@@ -76,6 +77,7 @@
     End Sub
     Public Sub AddScore(ByVal Score As Integer)
         Scores(CurrentPlayer, CurrentBowl) = Score
+        DisplayScore(CurrentPlayer, 0, Scores(CurrentPlayer, 0), Scores(CurrentPlayer, 1))
         UpdateScores(CurrentPlayer)
     End Sub
     Public Sub UpdateScores(Player As Integer)
@@ -88,7 +90,7 @@
             'Game Ended
             MessageBox.Show("Player 1 Won", "Game Over")
         End If
-        'DisplayScore(0, 2, "3", "4", SubTotal:="7")
+        DisplayScore(0, 2, "3", "4", SubTotal:="7")
         PlayerScoreBoxes(0, 1).Text = FormatOutput.FormatScores("a", "b", SubTotal:="ab")
         'P1F2.Text = FormatOutput.FormatScores("a", "b", SubTotal:="cb")
     End Sub

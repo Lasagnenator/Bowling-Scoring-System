@@ -47,7 +47,7 @@ Partial Class Form1
         Me.P1F9 = New System.Windows.Forms.RichTextBox()
         Me.P1F10 = New System.Windows.Forms.RichTextBox()
         Me.P1F1 = New System.Windows.Forms.RichTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Player1Label = New System.Windows.Forms.Label()
         Me.Player1Table.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -326,21 +326,22 @@ Partial Class Form1
         Me.P1F1.TabIndex = 21
         Me.P1F1.Text = "1     3" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "    4"
         '
-        'Label1
+        'Player1Label
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 30)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 25)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Player1"
+        Me.Player1Label.AutoSize = True
+        Me.Player1Label.BackColor = System.Drawing.SystemColors.Control
+        Me.Player1Label.Location = New System.Drawing.Point(12, 30)
+        Me.Player1Label.Name = "Player1Label"
+        Me.Player1Label.Size = New System.Drawing.Size(85, 25)
+        Me.Player1Label.TabIndex = 14
+        Me.Player1Label.Text = "Player1"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(974, 679)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Player1Label)
         Me.Controls.Add(Me.Player1Table)
         Me.Controls.Add(Me.EnterScoreButton)
         Me.Controls.Add(Me.RadioButton11)
@@ -380,7 +381,7 @@ Partial Class Form1
     Friend WithEvents EnterScoreButton As Button
     Friend WithEvents Player1Table As TableLayoutPanel
     Friend WithEvents Player1TotalScoreBox As RichTextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Player1Label As Label
     Friend WithEvents P1F2 As RichTextBox
     Friend WithEvents P1F3 As RichTextBox
     Friend WithEvents P1F4 As RichTextBox

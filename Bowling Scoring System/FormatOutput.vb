@@ -32,4 +32,34 @@
         End If
         Return FinalString
     End Function
+    Public Shared Function ScoreToText(Score As Integer) As String
+        Select Case Score
+            Case Form1.ValidScores.Miss
+                Return "-"
+            Case Form1.ValidScores.One
+                Return "1"
+            Case Form1.ValidScores.Two
+                Return "2"
+            Case Form1.ValidScores.Three
+                Return "3"
+            Case Form1.ValidScores.Four
+                Return "4"
+            Case Form1.ValidScores.Five
+                Return "5"
+            Case Form1.ValidScores.Six
+                Return "6"
+            Case Form1.ValidScores.Seven
+                Return "7"
+            Case Form1.ValidScores.Eight
+                Return "8"
+            Case Form1.ValidScores.Nine
+                Return "9"
+            Case Form1.ValidScores.Strike
+                Return "X"
+            Case Form1.ValidScores.Spare
+                Return "/"
+            Case Else
+                Return ""
+        End Select
+    End Function
 End Class
