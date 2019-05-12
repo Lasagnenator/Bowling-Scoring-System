@@ -1,8 +1,11 @@
 ﻿Public Class Form1
-    Dim CurrentPlayer As Integer = 0
+    Public CurrentPlayer As Integer = 0
     Public TotalPlayers As Integer
-    Dim CurrentFrame As Integer = 0
-    Dim Scores As Integer(,)
+    Public CurrentBowl As Integer = 0
+    Public Scores As Integer(,) = New Integer(3, 20) {} 'Make the array 4x21 (max scores x players) and Initialise with zeros
+    Public PlayerScoreBoxes As RichTextBox(,) = {
+        {P1F1, P1F2, P1F3, P1F4, P1F5, P1F6, P1F7, P1F8, P1F9, P1F10, Player1TotalScoreBox}
+        }
     Private Enum ValidScores
         Miss
         One
@@ -17,11 +20,30 @@
         Strike
         Spare
     End Enum
+    Dim Rb As RadioButton() = {
+        RadioButton0,
+        RadioButton1,
+        RadioButton2,
+        RadioButton3,
+        RadioButton4,
+        RadioButton5,
+        RadioButton6,
+        RadioButton7,
+        RadioButton8,
+        RadioButton9,
+        RadioButton10,
+        RadioButton11}
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PlayerNumDialog.ShowDialog()
+        'ReDim Scores(3, 20) 
     End Sub
     Public Sub MakePanels(num As Integer)
+        For i = 0 To 4
+            If i >= num Then
 
+            End If
+        Next
     End Sub
 
     Private Sub EnterScoreButton_Click(sender As Object, e As EventArgs) Handles EnterScoreButton.Click
@@ -52,10 +74,34 @@
         End If
     End Sub
     Public Sub AddScore(ByVal Score As Integer)
-        Scores(CurrentPlayer, CurrentFrame) = Score
+        Scores(CurrentPlayer, CurrentBowl) = Score
         UpdateScores(CurrentPlayer)
     End Sub
     Public Sub UpdateScores(Player As Integer)
-
+        CurrentPlayer += 1
+        If CurrentPlayer >= TotalPlayers Then
+            CurrentPlayer = 0
+            CurrentBowl += 1
+        End If
+        If CurrentBowl > 20 Then
+            'Game Ended
+            MessageBox.Show("Player 1 Won", "Game Over")
+        End If
     End Sub
+    Public Function FormatScores(ByVal Bowl1 As String, ByVal Optional Bowl2 As String = "", ByVal Optional Bowl3 As String = "") As String
+        Dim FinalString As String = ""
+        If Bowl2 = "" Then                          'Strike or still on first bowl
+            If Bowl1 = "X" Then                     'Strike
+                FinalString = "      X"             'Make the strike appear in the spot where bowl2 normally goes
+            Else
+                FinalString = Bowl1                 'First bowl only
+            End If
+        Else                                        'Two bowls taken
+            FinalString = Bowl1 + "     " + Bowl2
+        End If
+        If Not (Bowl3 = "") Then                    'Frame 10 third bowl taken
+            FinalString += "     " + Bowl3
+        End If
+        Return FinalString
+    End Function
 End Class

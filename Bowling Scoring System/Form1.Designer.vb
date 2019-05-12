@@ -35,19 +35,20 @@ Partial Class Form1
         Me.RadioButton10 = New System.Windows.Forms.RadioButton()
         Me.RadioButton11 = New System.Windows.Forms.RadioButton()
         Me.EnterScoreButton = New System.Windows.Forms.Button()
-        Me.Player1 = New System.Windows.Forms.Panel()
-        Me.RichTextBox10 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox9 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox8 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox7 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox6 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Player1Table = New System.Windows.Forms.TableLayoutPanel()
+        Me.Player1TotalScoreBox = New System.Windows.Forms.RichTextBox()
+        Me.P1F2 = New System.Windows.Forms.RichTextBox()
+        Me.P1F3 = New System.Windows.Forms.RichTextBox()
+        Me.P1F4 = New System.Windows.Forms.RichTextBox()
+        Me.P1F5 = New System.Windows.Forms.RichTextBox()
+        Me.P1F6 = New System.Windows.Forms.RichTextBox()
+        Me.P1F7 = New System.Windows.Forms.RichTextBox()
+        Me.P1F8 = New System.Windows.Forms.RichTextBox()
+        Me.P1F9 = New System.Windows.Forms.RichTextBox()
+        Me.P1F10 = New System.Windows.Forms.RichTextBox()
+        Me.P1F1 = New System.Windows.Forms.RichTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Player1.SuspendLayout()
+        Me.Player1Table.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadioButton0
@@ -183,133 +184,156 @@ Partial Class Form1
         Me.EnterScoreButton.Text = "Enter Score"
         Me.EnterScoreButton.UseVisualStyleBackColor = True
         '
-        'Player1
+        'Player1Table
         '
-        Me.Player1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Player1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Player1.Controls.Add(Me.RichTextBox10)
-        Me.Player1.Controls.Add(Me.RichTextBox9)
-        Me.Player1.Controls.Add(Me.RichTextBox8)
-        Me.Player1.Controls.Add(Me.RichTextBox7)
-        Me.Player1.Controls.Add(Me.RichTextBox6)
-        Me.Player1.Controls.Add(Me.RichTextBox5)
-        Me.Player1.Controls.Add(Me.RichTextBox4)
-        Me.Player1.Controls.Add(Me.RichTextBox3)
-        Me.Player1.Controls.Add(Me.RichTextBox2)
-        Me.Player1.Controls.Add(Me.RichTextBox1)
-        Me.Player1.Location = New System.Drawing.Point(12, 41)
-        Me.Player1.Name = "Player1"
-        Me.Player1.Size = New System.Drawing.Size(949, 100)
-        Me.Player1.TabIndex = 13
+        Me.Player1Table.ColumnCount = 11
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130.0!))
+        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108.0!))
+        Me.Player1Table.Controls.Add(Me.Player1TotalScoreBox, 10, 0)
+        Me.Player1Table.Controls.Add(Me.P1F2, 1, 0)
+        Me.Player1Table.Controls.Add(Me.P1F3, 2, 0)
+        Me.Player1Table.Controls.Add(Me.P1F4, 3, 0)
+        Me.Player1Table.Controls.Add(Me.P1F5, 4, 0)
+        Me.Player1Table.Controls.Add(Me.P1F6, 5, 0)
+        Me.Player1Table.Controls.Add(Me.P1F7, 6, 0)
+        Me.Player1Table.Controls.Add(Me.P1F8, 7, 0)
+        Me.Player1Table.Controls.Add(Me.P1F9, 8, 0)
+        Me.Player1Table.Controls.Add(Me.P1F10, 9, 0)
+        Me.Player1Table.Controls.Add(Me.P1F1, 0, 0)
+        Me.Player1Table.Location = New System.Drawing.Point(12, 61)
+        Me.Player1Table.Name = "Player1Table"
+        Me.Player1Table.RowCount = 1
+        Me.Player1Table.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.Player1Table.Size = New System.Drawing.Size(949, 108)
+        Me.Player1Table.TabIndex = 13
         '
-        'RichTextBox10
+        'Player1TotalScoreBox
         '
-        Me.RichTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox10.Location = New System.Drawing.Point(775, -1)
-        Me.RichTextBox10.Name = "RichTextBox10"
-        Me.RichTextBox10.ReadOnly = True
-        Me.RichTextBox10.Size = New System.Drawing.Size(173, 100)
-        Me.RichTextBox10.TabIndex = 21
-        Me.RichTextBox10.Text = ""
+        Me.Player1TotalScoreBox.Location = New System.Drawing.Point(844, 3)
+        Me.Player1TotalScoreBox.Name = "Player1TotalScoreBox"
+        Me.Player1TotalScoreBox.ReadOnly = True
+        Me.Player1TotalScoreBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.Player1TotalScoreBox.Size = New System.Drawing.Size(96, 102)
+        Me.Player1TotalScoreBox.TabIndex = 0
+        Me.Player1TotalScoreBox.Text = ""
         '
-        'RichTextBox9
+        'P1F2
         '
-        Me.RichTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox9.Location = New System.Drawing.Point(685, -1)
-        Me.RichTextBox9.Name = "RichTextBox9"
-        Me.RichTextBox9.ReadOnly = True
-        Me.RichTextBox9.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox9.TabIndex = 20
-        Me.RichTextBox9.Text = ""
+        Me.P1F2.Location = New System.Drawing.Point(82, 3)
+        Me.P1F2.Name = "P1F2"
+        Me.P1F2.ReadOnly = True
+        Me.P1F2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F2.Size = New System.Drawing.Size(73, 102)
+        Me.P1F2.TabIndex = 12
+        Me.P1F2.Text = ""
         '
-        'RichTextBox8
+        'P1F3
         '
-        Me.RichTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox8.Location = New System.Drawing.Point(597, -1)
-        Me.RichTextBox8.Name = "RichTextBox8"
-        Me.RichTextBox8.ReadOnly = True
-        Me.RichTextBox8.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox8.TabIndex = 19
-        Me.RichTextBox8.Text = ""
+        Me.P1F3.Location = New System.Drawing.Point(161, 3)
+        Me.P1F3.Name = "P1F3"
+        Me.P1F3.ReadOnly = True
+        Me.P1F3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F3.Size = New System.Drawing.Size(73, 102)
+        Me.P1F3.TabIndex = 13
+        Me.P1F3.Text = ""
         '
-        'RichTextBox7
+        'P1F4
         '
-        Me.RichTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox7.Location = New System.Drawing.Point(515, -1)
-        Me.RichTextBox7.Name = "RichTextBox7"
-        Me.RichTextBox7.ReadOnly = True
-        Me.RichTextBox7.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox7.TabIndex = 18
-        Me.RichTextBox7.Text = ""
+        Me.P1F4.Location = New System.Drawing.Point(240, 3)
+        Me.P1F4.Name = "P1F4"
+        Me.P1F4.ReadOnly = True
+        Me.P1F4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F4.Size = New System.Drawing.Size(73, 102)
+        Me.P1F4.TabIndex = 14
+        Me.P1F4.Text = ""
         '
-        'RichTextBox6
+        'P1F5
         '
-        Me.RichTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox6.Location = New System.Drawing.Point(427, -1)
-        Me.RichTextBox6.Name = "RichTextBox6"
-        Me.RichTextBox6.ReadOnly = True
-        Me.RichTextBox6.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox6.TabIndex = 17
-        Me.RichTextBox6.Text = ""
+        Me.P1F5.Location = New System.Drawing.Point(319, 3)
+        Me.P1F5.Name = "P1F5"
+        Me.P1F5.ReadOnly = True
+        Me.P1F5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F5.Size = New System.Drawing.Size(73, 102)
+        Me.P1F5.TabIndex = 15
+        Me.P1F5.Text = ""
         '
-        'RichTextBox5
+        'P1F6
         '
-        Me.RichTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox5.Location = New System.Drawing.Point(349, -1)
-        Me.RichTextBox5.Name = "RichTextBox5"
-        Me.RichTextBox5.ReadOnly = True
-        Me.RichTextBox5.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox5.TabIndex = 16
-        Me.RichTextBox5.Text = ""
+        Me.P1F6.Location = New System.Drawing.Point(398, 3)
+        Me.P1F6.Name = "P1F6"
+        Me.P1F6.ReadOnly = True
+        Me.P1F6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F6.Size = New System.Drawing.Size(73, 102)
+        Me.P1F6.TabIndex = 16
+        Me.P1F6.Text = ""
         '
-        'RichTextBox4
+        'P1F7
         '
-        Me.RichTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox4.Location = New System.Drawing.Point(263, -1)
-        Me.RichTextBox4.Name = "RichTextBox4"
-        Me.RichTextBox4.ReadOnly = True
-        Me.RichTextBox4.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox4.TabIndex = 15
-        Me.RichTextBox4.Text = ""
+        Me.P1F7.Location = New System.Drawing.Point(477, 3)
+        Me.P1F7.Name = "P1F7"
+        Me.P1F7.ReadOnly = True
+        Me.P1F7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F7.Size = New System.Drawing.Size(73, 102)
+        Me.P1F7.TabIndex = 17
+        Me.P1F7.Text = ""
         '
-        'RichTextBox3
+        'P1F8
         '
-        Me.RichTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox3.Location = New System.Drawing.Point(175, -1)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.ReadOnly = True
-        Me.RichTextBox3.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox3.TabIndex = 14
-        Me.RichTextBox3.Text = ""
+        Me.P1F8.Location = New System.Drawing.Point(556, 3)
+        Me.P1F8.Name = "P1F8"
+        Me.P1F8.ReadOnly = True
+        Me.P1F8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F8.Size = New System.Drawing.Size(73, 102)
+        Me.P1F8.TabIndex = 18
+        Me.P1F8.Text = ""
         '
-        'RichTextBox2
+        'P1F9
         '
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Location = New System.Drawing.Point(87, -1)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.ReadOnly = True
-        Me.RichTextBox2.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox2.TabIndex = 1
-        Me.RichTextBox2.Text = ""
+        Me.P1F9.Location = New System.Drawing.Point(635, 3)
+        Me.P1F9.Name = "P1F9"
+        Me.P1F9.ReadOnly = True
+        Me.P1F9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F9.Size = New System.Drawing.Size(73, 102)
+        Me.P1F9.TabIndex = 19
+        Me.P1F9.Text = ""
         '
-        'RichTextBox1
+        'P1F10
         '
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox1.Location = New System.Drawing.Point(-1, -1)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(93, 100)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
+        Me.P1F10.Location = New System.Drawing.Point(714, 3)
+        Me.P1F10.Name = "P1F10"
+        Me.P1F10.ReadOnly = True
+        Me.P1F10.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F10.Size = New System.Drawing.Size(114, 102)
+        Me.P1F10.TabIndex = 20
+        Me.P1F10.Text = "1     9     5"
+        '
+        'P1F1
+        '
+        Me.P1F1.Location = New System.Drawing.Point(3, 3)
+        Me.P1F1.Name = "P1F1"
+        Me.P1F1.ReadOnly = True
+        Me.P1F1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.P1F1.Size = New System.Drawing.Size(73, 102)
+        Me.P1F1.TabIndex = 21
+        Me.P1F1.Text = "1     3"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Location = New System.Drawing.Point(12, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 25)
+        Me.Label1.Size = New System.Drawing.Size(85, 25)
         Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Player 1"
+        Me.Label1.Text = "Player1"
         '
         'Form1
         '
@@ -317,7 +341,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(974, 679)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Player1)
+        Me.Controls.Add(Me.Player1Table)
         Me.Controls.Add(Me.EnterScoreButton)
         Me.Controls.Add(Me.RadioButton11)
         Me.Controls.Add(Me.RadioButton10)
@@ -335,7 +359,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Bowling Scoring System"
-        Me.Player1.ResumeLayout(False)
+        Me.Player1Table.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -354,16 +378,17 @@ Partial Class Form1
     Friend WithEvents RadioButton10 As RadioButton
     Friend WithEvents RadioButton11 As RadioButton
     Friend WithEvents EnterScoreButton As Button
-    Friend WithEvents Player1 As Panel
-    Friend WithEvents RichTextBox10 As RichTextBox
-    Friend WithEvents RichTextBox9 As RichTextBox
-    Friend WithEvents RichTextBox8 As RichTextBox
-    Friend WithEvents RichTextBox7 As RichTextBox
-    Friend WithEvents RichTextBox6 As RichTextBox
-    Friend WithEvents RichTextBox5 As RichTextBox
-    Friend WithEvents RichTextBox4 As RichTextBox
-    Friend WithEvents RichTextBox3 As RichTextBox
-    Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Player1Table As TableLayoutPanel
+    Friend WithEvents Player1TotalScoreBox As RichTextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents P1F2 As RichTextBox
+    Friend WithEvents P1F3 As RichTextBox
+    Friend WithEvents P1F4 As RichTextBox
+    Friend WithEvents P1F5 As RichTextBox
+    Friend WithEvents P1F6 As RichTextBox
+    Friend WithEvents P1F7 As RichTextBox
+    Friend WithEvents P1F8 As RichTextBox
+    Friend WithEvents P1F9 As RichTextBox
+    Friend WithEvents P1F10 As RichTextBox
+    Friend WithEvents P1F1 As RichTextBox
 End Class

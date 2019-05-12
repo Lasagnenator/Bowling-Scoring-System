@@ -74,6 +74,7 @@ Partial Class PlayerNumDialog
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Number of Players"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
