@@ -77,16 +77,31 @@
             AddScore(ValidScores.Spare)
         End If
     End Sub
+
     Public Sub AddScore(ByVal Score As Integer)
         Scores(CurrentPlayer, CurrentBowl) = Score
-        If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl
-            CurrentBowl += 1
-            Scores(CurrentPlayer, CurrentBowl) = 0
+        If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
+            If Not CurrentFrame = 9 Then
+                CurrentBowl += 1
+                Scores(CurrentPlayer, CurrentBowl) = 0
+            End If
+
         End If
-        If CurrentFrameBowl = 0 And (Not (Score = ValidScores.Strike)) Then
-            DisplayScore(CurrentPlayer, CurrentFrame, FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
-        Else
-            DisplayScore(CurrentPlayer, CurrentFrame, FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 1)), FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
+        If CurrentFrameBowl = 0 And (Not (Score = ValidScores.Strike)) Then 'First bowl of frame
+            DisplayScore(CurrentPlayer, CurrentFrame,
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
+        ElseIf CurrentFrame = 9 And Score = ValidScores.Strike And CurrentFrameBowl = 2 Then 'Third bowl in frame 10 as strike
+            DisplayScore(CurrentPlayer, CurrentFrame,
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 2)),
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 1)),
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
+        ElseIf CurrentFrame = 9 And Score = ValidScores.Strike And CurrentFrameBowl = 0 Then 'First bowl of frame 10 as Strike
+            DisplayScore(CurrentPlayer, CurrentFrame,
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
+        Else 'Second bowl of frame
+            DisplayScore(CurrentPlayer, CurrentFrame,
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 1)),
+                         FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
         End If
         UpdateScores(CurrentPlayer, Score)
         CurrentBowl += 1
@@ -95,30 +110,39 @@
     Public Sub UpdateScores(Player As Integer, Score As Integer)
         CurrentFrameBowl += 1
         If Score = ValidScores.Strike Then
-            CurrentFrameBowl = 0 'It should already be zero but just making sure
-            CurrentPlayer += 1
+            If Not CurrentFrame = 9 Then 'Not in frame 10
+                CurrentFrameBowl = 0 'It should already be zero but just making sure
+                CurrentPlayer += 1
+            End If
+
         End If
         If CurrentFrameBowl > 1 Then
             If Not CurrentFrame = 9 Then 'Not in Frame 10
                 CurrentFrameBowl = 0
                 CurrentPlayer += 1
                 CurrentBowl -= 2
-            ElseIf CurrentFrameBowl > 2 Then 'In Frame 10
+            ElseIf CurrentFrameBowl > 2 Then 'In Frame 10 and bowl 3
                 CurrentFrameBowl = 0
                 CurrentPlayer += 1
                 CurrentBowl -= 3
+            ElseIf CurrentFrame = 9 Then 'Did not earn the third bowl in frame 10
+                If Not (Score = ValidScores.Spare Or Score = ValidScores.Strike) Then
+                    CurrentFrameBowl = 0
+                    CurrentPlayer += 1
+                    CurrentBowl -= 2
+                End If
             End If
         End If
         If CurrentPlayer >= TotalPlayers Then
             CurrentPlayer = 0
             CurrentFrame += 1
         End If
-        If CurrentBowl > 20 Then 'This should always occur
+        If CurrentBowl > 20 Or CurrentFrame > 9 Then 'This should always occur
             'Game Ended
             MessageBox.Show("Player 1 Won", "Game Over")
         End If
-        DisplayScore(0, 2, "3", "4", SubTotal:="7")
-        PlayerScoreBoxes(0, 1).Text = FormatOutput.FormatScores("a", "b", SubTotal:="ab")
+        'DisplayScore(0, 2, "3", "4", SubTotal:="7")
+        'PlayerScoreBoxes(0, 1).Text = FormatOutput.FormatScores("a", "b", SubTotal:="ab")
         'P1F2.Text = FormatOutput.FormatScores("a", "b", SubTotal:="cb")
     End Sub
 
