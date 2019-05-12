@@ -336,7 +336,7 @@ Partial Class Form1
         Me.Player1Label.TabIndex = 14
         Me.Player1Label.Text = "Player1"
         '
-        'Form1
+        'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -358,7 +358,7 @@ Partial Class Form1
         Me.Controls.Add(Me.RadioButton0)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "MainWindow"
         Me.Text = "Bowling Scoring System"
         Me.Player1Table.ResumeLayout(False)
         Me.ResumeLayout(False)

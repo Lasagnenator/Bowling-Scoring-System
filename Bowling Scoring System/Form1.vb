@@ -77,6 +77,9 @@
     End Sub
     Public Sub AddScore(ByVal Score As Integer)
         Scores(CurrentPlayer, CurrentBowl) = Score
+        If Score = ValidScores.Strike Then
+
+        End If
         DisplayScore(CurrentPlayer, 0, Scores(CurrentPlayer, 0), Scores(CurrentPlayer, 1))
         UpdateScores(CurrentPlayer)
     End Sub
@@ -86,7 +89,7 @@
             CurrentPlayer = 0
             CurrentBowl += 1
         End If
-        If CurrentBowl > 20 Then
+        If CurrentBowl > 20 Then 'This should always occur
             'Game Ended
             MessageBox.Show("Player 1 Won", "Game Over")
         End If
