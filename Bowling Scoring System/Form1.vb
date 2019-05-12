@@ -5,7 +5,7 @@
     Public CurrentBowl As Integer = 0 'Where we are in the Scores variable horizontally
     Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
     Public Scores As Integer(,) = New Integer(3, 20) {} 'Make the array 4x21 (max scores x players) and Initialise with zeros
-    Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 10) {}
+    Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 9) {}
     Public Enum ValidScores
         Miss
         One
@@ -39,7 +39,7 @@
         'ReDim Scores(3, 20) 
         'Initialise The PlayerScoreBoxes array
         PlayerScoreBoxes = {
-        {P1F1, P1F2, P1F3, P1F4, P1F5, P1F6, P1F7, P1F8, P1F9, P1F10, Player1TotalScoreBox}
+        {P1F1, P1F2, P1F3, P1F4, P1F5, P1F6, P1F7, P1F8, P1F9, P1F10}
         }
     End Sub
     Public Sub MakePanels(num As Integer)
@@ -83,7 +83,7 @@
             CurrentBowl += 1
             Scores(CurrentPlayer, CurrentBowl) = 0
         End If
-        If CurrentFrameBowl = 0 Then
+        If CurrentFrameBowl = 0 And (Not (Score = ValidScores.Strike)) Then
             DisplayScore(CurrentPlayer, CurrentFrame, FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
         Else
             DisplayScore(CurrentPlayer, CurrentFrame, FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 1)), FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
