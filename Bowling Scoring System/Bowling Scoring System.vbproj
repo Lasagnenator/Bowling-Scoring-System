@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormatOutput.vb" />
     <Compile Include="PlayerNumDialog.Designer.vb">
       <DependentUpon>PlayerNumDialog.vb</DependentUpon>
     </Compile>
