@@ -87,10 +87,10 @@
             End If
 
         End If
-        If CurrentFrameBowl = 0 And (Not (Score = ValidScores.Strike)) Then 'First bowl of frame
+    If CurrentFrameBowl = 0 And (Not (Score = ValidScores.Strike)) Then 'First bowl of frame as strike
             DisplayScore(CurrentPlayer, CurrentFrame,
                          FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl)))
-        ElseIf CurrentFrame = 9 And Score = ValidScores.Strike And CurrentFrameBowl = 2 Then 'Third bowl in frame 10 as strike
+        ElseIf CurrentFrame = 9 And CurrentFrameBowl = 2 Then 'Third bowl in frame 10 as strike
             DisplayScore(CurrentPlayer, CurrentFrame,
                          FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 2)),
                          FormatOutput.ScoreToText(Scores(CurrentPlayer, CurrentBowl - 1)),
@@ -126,7 +126,7 @@
                 CurrentPlayer += 1
                 CurrentBowl -= 3
             ElseIf CurrentFrame = 9 Then 'Did not earn the third bowl in frame 10
-                If Not (Score = ValidScores.Spare Or Score = ValidScores.Strike) Then
+                If Not (Scores(CurrentPlayer, 18) = ValidScores.Strike Or Scores(CurrentPlayer, 19) = ValidScores.Spare) Then
                     CurrentFrameBowl = 0
                     CurrentPlayer += 1
                     CurrentBowl -= 2
