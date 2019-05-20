@@ -23,13 +23,13 @@ Partial Class PlayerPanelControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MainGroupBox = New System.Windows.Forms.GroupBox()
-        Me.Bowl1 = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.MainGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainGroupBox
         '
-        Me.MainGroupBox.Controls.Add(Me.Bowl1)
+        Me.MainGroupBox.Controls.Add(Me.TableLayoutPanel1)
         Me.MainGroupBox.Location = New System.Drawing.Point(0, 0)
         Me.MainGroupBox.Name = "MainGroupBox"
         Me.MainGroupBox.Size = New System.Drawing.Size(1133, 151)
@@ -37,12 +37,27 @@ Partial Class PlayerPanelControl
         Me.MainGroupBox.TabStop = False
         Me.MainGroupBox.Text = "GroupBox1"
         '
-        'Bowl1
+        'TableLayoutPanel1
         '
-        Me.Bowl1.Location = New System.Drawing.Point(7, 31)
-        Me.Bowl1.Name = "Bowl1"
-        Me.Bowl1.Size = New System.Drawing.Size(38, 31)
-        Me.Bowl1.TabIndex = 0
+        Me.TableLayoutPanel1.ColumnCount = 11
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909!))
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 31)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1123, 100)
+        Me.TableLayoutPanel1.TabIndex = 0
         '
         'PlayerPanelControl
         '
@@ -52,11 +67,10 @@ Partial Class PlayerPanelControl
         Me.Name = "PlayerPanelControl"
         Me.Size = New System.Drawing.Size(1133, 151)
         Me.MainGroupBox.ResumeLayout(False)
-        Me.MainGroupBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents MainGroupBox As GroupBox
-    Friend WithEvents Bowl1 As TextBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class
