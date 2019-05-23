@@ -1,14 +1,20 @@
 ﻿Public Class PlayerPanelControl
-    Private NameValue As String
     Public Property PlayerName() As String
         Get
-            Return NameValue
+            Return MainGroupBox.Text
         End Get
         Set(ByVal value As String)
             MainGroupBox.Text = value
-            NameValue = value
             'UpdateSelf()
         End Set
     End Property
     Public Property Scores() As Integer() = New Integer(20) {}
+
+    Public Sub UpdateSelf()
+
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+
+    End Sub
 End Class

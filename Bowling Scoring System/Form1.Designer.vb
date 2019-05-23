@@ -224,7 +224,7 @@ Partial Class Form1
         Me.Player1TotalScoreBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
         Me.Player1TotalScoreBox.Size = New System.Drawing.Size(96, 102)
         Me.Player1TotalScoreBox.TabIndex = 0
-        Me.Player1TotalScoreBox.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "     19"
+        Me.Player1TotalScoreBox.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "     24"
         '
         'P1F2
         '
@@ -314,7 +314,7 @@ Partial Class Form1
         Me.P1F10.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
         Me.P1F10.Size = New System.Drawing.Size(114, 102)
         Me.P1F10.TabIndex = 20
-        Me.P1F10.Text = "1     9     5" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "       18"
+        Me.P1F10.Text = "1     9     5" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "       24"
         '
         'P1F1
         '
@@ -336,7 +336,7 @@ Partial Class Form1
         Me.Player1Label.TabIndex = 14
         Me.Player1Label.Text = "Player1"
         '
-        'MainWindow
+        'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -358,7 +358,7 @@ Partial Class Form1
         Me.Controls.Add(Me.RadioButton0)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.Name = "MainWindow"
+        Me.Name = "Form1"
         Me.Text = "Bowling Scoring System"
         Me.Player1Table.ResumeLayout(False)
         Me.ResumeLayout(False)
