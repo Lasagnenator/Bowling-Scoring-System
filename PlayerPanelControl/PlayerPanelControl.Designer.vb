@@ -34,10 +34,10 @@ Partial Class PlayerPanelControl
         'MainGroupBox
         '
         Me.MainGroupBox.Controls.Add(Me.TableLayoutPanel1)
-        Me.MainGroupBox.Location = New System.Drawing.Point(0, 0)
+        Me.MainGroupBox.Location = New System.Drawing.Point(8, 8)
         Me.MainGroupBox.Name = "MainGroupBox"
         Me.MainGroupBox.Size = New System.Drawing.Size(1133, 151)
-        Me.MainGroupBox.TabIndex = 0
+        Me.MainGroupBox.TabIndex = 1
         Me.MainGroupBox.TabStop = False
         Me.MainGroupBox.Text = "GroupBox1"
         '
@@ -109,9 +109,9 @@ Partial Class PlayerPanelControl
 
     End Sub
 
-    Friend WithEvents MainGroupBox As GroupBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents F1 As RichTextBox
-    Friend WithEvents Subtotal1 As RichTextBox
-    Friend WithEvents Total As RichTextBox
+    Friend WithEvents MainGroupBox As Windows.Forms.GroupBox
+    Friend WithEvents TableLayoutPanel1 As Windows.Forms.TableLayoutPanel
+    Friend WithEvents F1 As Windows.Forms.RichTextBox
+    Friend WithEvents Subtotal1 As Windows.Forms.RichTextBox
+    Friend WithEvents Total As Windows.Forms.RichTextBox
 End Class
