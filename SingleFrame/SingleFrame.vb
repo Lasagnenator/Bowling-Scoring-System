@@ -11,19 +11,23 @@
         End Set
     End Property
     Private SubTotalValue As Integer
-    Public Property NewProperty() As Integer
+    Public Property SubTotal() As Integer
         Get
             Return SubTotalValue
         End Get
         Set(ByVal value As Integer)
             SubTotalValue = value
-            SubTotal.Text = SubTotalValue
+            SubTotalBox.Text = SubTotalValue
         End Set
     End Property
 
     Private Sub SingleFrame_ControlAdded(sender As Object, e As ControlEventArgs) Handles Me.ControlAdded
         Bowl1.SelectionAlignment = HorizontalAlignment.Center
         Bowl2.SelectionAlignment = HorizontalAlignment.Center
-        SubTotal.SelectionAlignment = HorizontalAlignment.Center
+        SubTotalBox.SelectionAlignment = HorizontalAlignment.Center
+    End Sub
+
+    Private Sub SingleFrame_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+
     End Sub
 End Class

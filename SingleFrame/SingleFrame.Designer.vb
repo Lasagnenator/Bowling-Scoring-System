@@ -24,7 +24,7 @@ Partial Class SingleFrame
     Private Sub InitializeComponent()
         Me.Bowl2 = New System.Windows.Forms.RichTextBox()
         Me.Bowl1 = New System.Windows.Forms.RichTextBox()
-        Me.SubTotal = New System.Windows.Forms.RichTextBox()
+        Me.SubTotalBox = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'Bowl2
@@ -35,31 +35,37 @@ Partial Class SingleFrame
         Me.Bowl2.ReadOnly = True
         Me.Bowl2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Bowl2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.Bowl2.Size = New System.Drawing.Size(50, 50)
+        Me.Bowl2.Size = New System.Drawing.Size(52, 52)
         Me.Bowl2.TabIndex = 1
         Me.Bowl2.Text = ""
         '
         'Bowl1
         '
+        Me.Bowl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Bowl1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Bowl1.Location = New System.Drawing.Point(-1, 0)
         Me.Bowl1.Name = "Bowl1"
         Me.Bowl1.ReadOnly = True
         Me.Bowl1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.Bowl1.Size = New System.Drawing.Size(50, 50)
+        Me.Bowl1.Size = New System.Drawing.Size(52, 52)
         Me.Bowl1.TabIndex = 2
         Me.Bowl1.Text = ""
         '
-        'SubTotal
+        'SubTotalBox
         '
-        Me.SubTotal.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SubTotal.Location = New System.Drawing.Point(49, 50)
-        Me.SubTotal.Name = "SubTotal"
-        Me.SubTotal.ReadOnly = True
-        Me.SubTotal.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.SubTotal.Size = New System.Drawing.Size(50, 50)
-        Me.SubTotal.TabIndex = 3
-        Me.SubTotal.Text = ""
+        Me.SubTotalBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SubTotalBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SubTotalBox.Location = New System.Drawing.Point(49, 50)
+        Me.SubTotalBox.Name = "SubTotalBox"
+        Me.SubTotalBox.ReadOnly = True
+        Me.SubTotalBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.SubTotalBox.Size = New System.Drawing.Size(52, 52)
+        Me.SubTotalBox.TabIndex = 3
+        Me.SubTotalBox.Text = ""
         '
         'SingleFrame
         '
@@ -67,14 +73,14 @@ Partial Class SingleFrame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Controls.Add(Me.Bowl2)
-        Me.Controls.Add(Me.SubTotal)
+        Me.Controls.Add(Me.SubTotalBox)
         Me.Controls.Add(Me.Bowl1)
         Me.Name = "SingleFrame"
-        Me.Size = New System.Drawing.Size(98, 98)
+        Me.Size = New System.Drawing.Size(100, 100)
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Bowl2 As RichTextBox
     Friend WithEvents Bowl1 As RichTextBox
-    Friend WithEvents SubTotal As RichTextBox
+    Friend WithEvents SubTotalBox As RichTextBox
 End Class
