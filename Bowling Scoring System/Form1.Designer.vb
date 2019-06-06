@@ -48,6 +48,7 @@ Partial Class Form1
         Me.P1F10 = New System.Windows.Forms.RichTextBox()
         Me.P1F1 = New System.Windows.Forms.RichTextBox()
         Me.Player1Label = New System.Windows.Forms.Label()
+        Me.PlayerPanel1 = New PlayerPanelControl.PlayerPanelControl()
         Me.Player1Table.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -336,11 +337,21 @@ Partial Class Form1
         Me.Player1Label.TabIndex = 14
         Me.Player1Label.Text = "Player1"
         '
+        'PlayerPanel1
+        '
+        Me.PlayerPanel1.Location = New System.Drawing.Point(11, 175)
+        Me.PlayerPanel1.Name = "PlayerPanel1"
+        Me.PlayerPanel1.PlayerName = Nothing
+        Me.PlayerPanel1.Scores = New Integer() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        Me.PlayerPanel1.Size = New System.Drawing.Size(950, 151)
+        Me.PlayerPanel1.TabIndex = 15
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(974, 679)
+        Me.Controls.Add(Me.PlayerPanel1)
         Me.Controls.Add(Me.Player1Label)
         Me.Controls.Add(Me.Player1Table)
         Me.Controls.Add(Me.EnterScoreButton)
@@ -392,4 +403,5 @@ Partial Class Form1
     Friend WithEvents P1F9 As RichTextBox
     Friend WithEvents P1F10 As RichTextBox
     Friend WithEvents P1F1 As RichTextBox
+    Friend WithEvents PlayerPanel1 As PlayerPanelControl.PlayerPanelControl
 End Class
