@@ -102,6 +102,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SingleFrame.Designer.vb">
+      <DependentUpon>SingleFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SingleFrame.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerNumDialog.resx">
       <DependentUpon>PlayerNumDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleFrame.resx">
+      <DependentUpon>SingleFrame.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
