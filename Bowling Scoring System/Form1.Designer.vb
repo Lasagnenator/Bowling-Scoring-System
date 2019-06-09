@@ -341,10 +341,12 @@ Partial Class Form1
         '
         Me.PlayerPanel1.Location = New System.Drawing.Point(11, 175)
         Me.PlayerPanel1.Name = "PlayerPanel1"
-        Me.PlayerPanel1.PlayerName = Nothing
-        Me.PlayerPanel1.Scores = New Integer() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        Me.PlayerPanel1.PlayerName = "Player 1"
+        Me.PlayerPanel1.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
         Me.PlayerPanel1.Size = New System.Drawing.Size(950, 151)
+        Me.PlayerPanel1.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
         Me.PlayerPanel1.TabIndex = 15
+        Me.PlayerPanel1.TotalScore = Nothing
         '
         'Form1
         '

@@ -134,6 +134,10 @@
       <Project>{ae8a1459-691e-4341-be3f-96abcb306506}</Project>
       <Name>PlayerPanelControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SingleFrame\SingleFrame.vbproj">
+      <Project>{37622fcc-b4b2-46a3-863b-d746f83e90e7}</Project>
+      <Name>SingleFrame</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

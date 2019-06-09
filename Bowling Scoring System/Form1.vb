@@ -41,7 +41,6 @@
         PlayerScoreBoxes = {
         {P1F1, P1F2, P1F3, P1F4, P1F5, P1F6, P1F7, P1F8, P1F9, P1F10}
         }
-        PlayerPanel1.PlayerName = "Player 1"
     End Sub
     Public Sub MakePanels(ByVal num As Integer)
         For i = 0 To 4
