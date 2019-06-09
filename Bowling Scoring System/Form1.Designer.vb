@@ -35,21 +35,21 @@ Partial Class Form1
         Me.RadioButton10 = New System.Windows.Forms.RadioButton()
         Me.RadioButton11 = New System.Windows.Forms.RadioButton()
         Me.EnterScoreButton = New System.Windows.Forms.Button()
-        Me.Player1Table = New System.Windows.Forms.TableLayoutPanel()
-        Me.Player1TotalScoreBox = New System.Windows.Forms.RichTextBox()
-        Me.P1F2 = New System.Windows.Forms.RichTextBox()
-        Me.P1F3 = New System.Windows.Forms.RichTextBox()
-        Me.P1F4 = New System.Windows.Forms.RichTextBox()
-        Me.P1F5 = New System.Windows.Forms.RichTextBox()
-        Me.P1F6 = New System.Windows.Forms.RichTextBox()
-        Me.P1F7 = New System.Windows.Forms.RichTextBox()
-        Me.P1F8 = New System.Windows.Forms.RichTextBox()
-        Me.P1F9 = New System.Windows.Forms.RichTextBox()
-        Me.P1F10 = New System.Windows.Forms.RichTextBox()
-        Me.P1F1 = New System.Windows.Forms.RichTextBox()
-        Me.Player1Label = New System.Windows.Forms.Label()
         Me.PlayerPanel1 = New PlayerPanelControl.PlayerPanelControl()
-        Me.Player1Table.SuspendLayout()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PlayerPanel2 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel3 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel4 = New PlayerPanelControl.PlayerPanelControl()
         Me.SuspendLayout()
         '
         'RadioButton0
@@ -185,177 +185,169 @@ Partial Class Form1
         Me.EnterScoreButton.Text = "Enter Score"
         Me.EnterScoreButton.UseVisualStyleBackColor = True
         '
-        'Player1Table
-        '
-        Me.Player1Table.ColumnCount = 11
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130.0!))
-        Me.Player1Table.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108.0!))
-        Me.Player1Table.Controls.Add(Me.Player1TotalScoreBox, 10, 0)
-        Me.Player1Table.Controls.Add(Me.P1F2, 1, 0)
-        Me.Player1Table.Controls.Add(Me.P1F3, 2, 0)
-        Me.Player1Table.Controls.Add(Me.P1F4, 3, 0)
-        Me.Player1Table.Controls.Add(Me.P1F5, 4, 0)
-        Me.Player1Table.Controls.Add(Me.P1F6, 5, 0)
-        Me.Player1Table.Controls.Add(Me.P1F7, 6, 0)
-        Me.Player1Table.Controls.Add(Me.P1F8, 7, 0)
-        Me.Player1Table.Controls.Add(Me.P1F9, 8, 0)
-        Me.Player1Table.Controls.Add(Me.P1F10, 9, 0)
-        Me.Player1Table.Controls.Add(Me.P1F1, 0, 0)
-        Me.Player1Table.Location = New System.Drawing.Point(12, 61)
-        Me.Player1Table.Name = "Player1Table"
-        Me.Player1Table.RowCount = 1
-        Me.Player1Table.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.Player1Table.Size = New System.Drawing.Size(949, 108)
-        Me.Player1Table.TabIndex = 13
-        '
-        'Player1TotalScoreBox
-        '
-        Me.Player1TotalScoreBox.Location = New System.Drawing.Point(844, 3)
-        Me.Player1TotalScoreBox.Name = "Player1TotalScoreBox"
-        Me.Player1TotalScoreBox.ReadOnly = True
-        Me.Player1TotalScoreBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.Player1TotalScoreBox.Size = New System.Drawing.Size(96, 102)
-        Me.Player1TotalScoreBox.TabIndex = 0
-        Me.Player1TotalScoreBox.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "     24"
-        '
-        'P1F2
-        '
-        Me.P1F2.Location = New System.Drawing.Point(82, 3)
-        Me.P1F2.Name = "P1F2"
-        Me.P1F2.ReadOnly = True
-        Me.P1F2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F2.Size = New System.Drawing.Size(73, 102)
-        Me.P1F2.TabIndex = 12
-        Me.P1F2.Text = ""
-        '
-        'P1F3
-        '
-        Me.P1F3.Location = New System.Drawing.Point(161, 3)
-        Me.P1F3.Name = "P1F3"
-        Me.P1F3.ReadOnly = True
-        Me.P1F3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F3.Size = New System.Drawing.Size(73, 102)
-        Me.P1F3.TabIndex = 13
-        Me.P1F3.Text = ""
-        '
-        'P1F4
-        '
-        Me.P1F4.Location = New System.Drawing.Point(240, 3)
-        Me.P1F4.Name = "P1F4"
-        Me.P1F4.ReadOnly = True
-        Me.P1F4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F4.Size = New System.Drawing.Size(73, 102)
-        Me.P1F4.TabIndex = 14
-        Me.P1F4.Text = ""
-        '
-        'P1F5
-        '
-        Me.P1F5.Location = New System.Drawing.Point(319, 3)
-        Me.P1F5.Name = "P1F5"
-        Me.P1F5.ReadOnly = True
-        Me.P1F5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F5.Size = New System.Drawing.Size(73, 102)
-        Me.P1F5.TabIndex = 15
-        Me.P1F5.Text = ""
-        '
-        'P1F6
-        '
-        Me.P1F6.Location = New System.Drawing.Point(398, 3)
-        Me.P1F6.Name = "P1F6"
-        Me.P1F6.ReadOnly = True
-        Me.P1F6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F6.Size = New System.Drawing.Size(73, 102)
-        Me.P1F6.TabIndex = 16
-        Me.P1F6.Text = ""
-        '
-        'P1F7
-        '
-        Me.P1F7.Location = New System.Drawing.Point(477, 3)
-        Me.P1F7.Name = "P1F7"
-        Me.P1F7.ReadOnly = True
-        Me.P1F7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F7.Size = New System.Drawing.Size(73, 102)
-        Me.P1F7.TabIndex = 17
-        Me.P1F7.Text = ""
-        '
-        'P1F8
-        '
-        Me.P1F8.Location = New System.Drawing.Point(556, 3)
-        Me.P1F8.Name = "P1F8"
-        Me.P1F8.ReadOnly = True
-        Me.P1F8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F8.Size = New System.Drawing.Size(73, 102)
-        Me.P1F8.TabIndex = 18
-        Me.P1F8.Text = ""
-        '
-        'P1F9
-        '
-        Me.P1F9.Location = New System.Drawing.Point(635, 3)
-        Me.P1F9.Name = "P1F9"
-        Me.P1F9.ReadOnly = True
-        Me.P1F9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F9.Size = New System.Drawing.Size(73, 102)
-        Me.P1F9.TabIndex = 19
-        Me.P1F9.Text = ""
-        '
-        'P1F10
-        '
-        Me.P1F10.Location = New System.Drawing.Point(714, 3)
-        Me.P1F10.Name = "P1F10"
-        Me.P1F10.ReadOnly = True
-        Me.P1F10.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F10.Size = New System.Drawing.Size(114, 102)
-        Me.P1F10.TabIndex = 20
-        Me.P1F10.Text = "1     9     5" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "       24"
-        '
-        'P1F1
-        '
-        Me.P1F1.Location = New System.Drawing.Point(3, 3)
-        Me.P1F1.Name = "P1F1"
-        Me.P1F1.ReadOnly = True
-        Me.P1F1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.P1F1.Size = New System.Drawing.Size(73, 102)
-        Me.P1F1.TabIndex = 21
-        Me.P1F1.Text = "1     3" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "    4"
-        '
-        'Player1Label
-        '
-        Me.Player1Label.AutoSize = True
-        Me.Player1Label.BackColor = System.Drawing.SystemColors.Control
-        Me.Player1Label.Location = New System.Drawing.Point(12, 30)
-        Me.Player1Label.Name = "Player1Label"
-        Me.Player1Label.Size = New System.Drawing.Size(85, 25)
-        Me.Player1Label.TabIndex = 14
-        Me.Player1Label.Text = "Player1"
-        '
         'PlayerPanel1
         '
-        Me.PlayerPanel1.Location = New System.Drawing.Point(11, 175)
+        Me.PlayerPanel1.Location = New System.Drawing.Point(12, 12)
         Me.PlayerPanel1.Name = "PlayerPanel1"
         Me.PlayerPanel1.PlayerName = "Player 1"
         Me.PlayerPanel1.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
         Me.PlayerPanel1.Size = New System.Drawing.Size(950, 151)
         Me.PlayerPanel1.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
         Me.PlayerPanel1.TabIndex = 15
-        Me.PlayerPanel1.TotalScore = Nothing
+        Me.PlayerPanel1.TotalScore = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(61, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(24, 25)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "1"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(146, -1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(24, 25)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(234, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(24, 25)
+        Me.Label3.TabIndex = 19
+        Me.Label3.Text = "3"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(317, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(24, 25)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "4"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(394, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(24, 25)
+        Me.Label5.TabIndex = 21
+        Me.Label5.Text = "5"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(482, -1)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(24, 25)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "6"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(566, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(24, 25)
+        Me.Label7.TabIndex = 23
+        Me.Label7.Text = "7"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(651, -1)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(24, 25)
+        Me.Label8.TabIndex = 24
+        Me.Label8.Text = "8"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(735, -1)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(24, 25)
+        Me.Label9.TabIndex = 25
+        Me.Label9.Text = "9"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(812, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(36, 25)
+        Me.Label10.TabIndex = 26
+        Me.Label10.Text = "10"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(880, -1)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(60, 25)
+        Me.Label11.TabIndex = 27
+        Me.Label11.Text = "Total"
+        '
+        'PlayerPanel2
+        '
+        Me.PlayerPanel2.Location = New System.Drawing.Point(12, 153)
+        Me.PlayerPanel2.Name = "PlayerPanel2"
+        Me.PlayerPanel2.PlayerName = "Player 2"
+        Me.PlayerPanel2.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel2.Size = New System.Drawing.Size(950, 151)
+        Me.PlayerPanel2.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel2.TabIndex = 28
+        Me.PlayerPanel2.TotalScore = 0
+        '
+        'PlayerPanel3
+        '
+        Me.PlayerPanel3.Location = New System.Drawing.Point(12, 298)
+        Me.PlayerPanel3.Name = "PlayerPanel3"
+        Me.PlayerPanel3.PlayerName = "Player 3"
+        Me.PlayerPanel3.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel3.Size = New System.Drawing.Size(950, 151)
+        Me.PlayerPanel3.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel3.TabIndex = 29
+        Me.PlayerPanel3.TotalScore = 0
+        '
+        'PlayerPanel4
+        '
+        Me.PlayerPanel4.Location = New System.Drawing.Point(12, 439)
+        Me.PlayerPanel4.Name = "PlayerPanel4"
+        Me.PlayerPanel4.PlayerName = "Player 4"
+        Me.PlayerPanel4.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel4.Size = New System.Drawing.Size(950, 151)
+        Me.PlayerPanel4.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel4.TabIndex = 30
+        Me.PlayerPanel4.TotalScore = 0
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(974, 679)
+        Me.Controls.Add(Me.PlayerPanel4)
+        Me.Controls.Add(Me.PlayerPanel3)
+        Me.Controls.Add(Me.PlayerPanel2)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PlayerPanel1)
-        Me.Controls.Add(Me.Player1Label)
-        Me.Controls.Add(Me.Player1Table)
         Me.Controls.Add(Me.EnterScoreButton)
         Me.Controls.Add(Me.RadioButton11)
         Me.Controls.Add(Me.RadioButton10)
@@ -373,7 +365,6 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Bowling Scoring System"
-        Me.Player1Table.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -392,18 +383,19 @@ Partial Class Form1
     Friend WithEvents RadioButton10 As RadioButton
     Friend WithEvents RadioButton11 As RadioButton
     Friend WithEvents EnterScoreButton As Button
-    Friend WithEvents Player1Table As TableLayoutPanel
-    Friend WithEvents Player1TotalScoreBox As RichTextBox
-    Friend WithEvents Player1Label As Label
-    Friend WithEvents P1F2 As RichTextBox
-    Friend WithEvents P1F3 As RichTextBox
-    Friend WithEvents P1F4 As RichTextBox
-    Friend WithEvents P1F5 As RichTextBox
-    Friend WithEvents P1F6 As RichTextBox
-    Friend WithEvents P1F7 As RichTextBox
-    Friend WithEvents P1F8 As RichTextBox
-    Friend WithEvents P1F9 As RichTextBox
-    Friend WithEvents P1F10 As RichTextBox
-    Friend WithEvents P1F1 As RichTextBox
     Friend WithEvents PlayerPanel1 As PlayerPanelControl.PlayerPanelControl
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PlayerPanel2 As PlayerPanelControl.PlayerPanelControl
+    Friend WithEvents PlayerPanel3 As PlayerPanelControl.PlayerPanelControl
+    Friend WithEvents PlayerPanel4 As PlayerPanelControl.PlayerPanelControl
 End Class

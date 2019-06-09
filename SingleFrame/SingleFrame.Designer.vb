@@ -30,8 +30,7 @@ Partial Class SingleFrame
         '
         'Bowl2
         '
-        Me.Bowl2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Bowl2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Bowl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Bowl2.Location = New System.Drawing.Point(35, 0)

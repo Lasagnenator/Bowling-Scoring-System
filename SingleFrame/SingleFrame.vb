@@ -1,14 +1,4 @@
 ﻿Public Class SingleFrame
-    Private Bowl3ScoreValue As String
-    Public Property Bowl3Score As String
-        Get
-            Return Bowl3ScoreValue
-        End Get
-        Set(value As String)
-            Bowl3ScoreValue = value
-            Bowl3.Text = value
-        End Set
-    End Property
     Protected ScoresValue As String() = New String(2) {} 'Array of length 3
     Public Property Scores() As String()
         Get
@@ -25,7 +15,7 @@
             End Try
         End Set
     End Property
-    Private SubTotalValue As String = New String("")
+    Private SubTotalValue As String = 0
     Public Property SubTotal() As String
         Get
             Return SubTotalValue

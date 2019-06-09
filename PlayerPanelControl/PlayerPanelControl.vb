@@ -1,8 +1,8 @@
-﻿Imports System.Windows.Forms
+﻿Option Infer On
+Imports System.Windows.Forms
 
 Public Class PlayerPanelControl
     'Visible property is already made.
-    Private FrameBoxes As SingleFrame.SingleFrame() = New SingleFrame.SingleFrame() {F1, F2, F3, F4, F5, F6, F7, F8, F9, F10}
     Private NameValue As String
     Public Property PlayerName() As String
         Get
@@ -11,7 +11,6 @@ Public Class PlayerPanelControl
         Set(ByVal value As String)
             MainGroupBox.Text = value
             NameValue = value
-            'UpdateSelf()
         End Set
     End Property
     Private ScoresValue As String() = New String(20) {} '21 length array
@@ -21,33 +20,46 @@ Public Class PlayerPanelControl
         End Get
         Set(value As String())
             ScoresValue = value
-            For i = 0 To 9 'loop through frames 1-9 and update their scores
-                FrameBoxes(i).Scores = {ScoresValue(i * 2), ScoresValue((i * 2) + 1)}
-            Next
-            'Then update frame 10's score as it has 3 scores
+            F1.Scores = {ScoresValue(0), ScoresValue(1)}
+            F2.Scores = {ScoresValue(2), ScoresValue(3)}
+            F3.Scores = {ScoresValue(4), ScoresValue(5)}
+            F4.Scores = {ScoresValue(6), ScoresValue(7)}
+            F5.Scores = {ScoresValue(8), ScoresValue(9)}
+            F6.Scores = {ScoresValue(10), ScoresValue(11)}
+            F7.Scores = {ScoresValue(12), ScoresValue(13)}
+            F8.Scores = {ScoresValue(14), ScoresValue(15)}
+            F9.Scores = {ScoresValue(16), ScoresValue(17)}
             F10.Scores = {ScoresValue(18), ScoresValue(19), ScoresValue(20)}
         End Set
     End Property
-    Private TotalScoreValue As String
-    Public Property TotalScore() As String
+    Private TotalScoreValue As Integer
+    Public Property TotalScore() As Integer
         Get
             Return TotalScoreValue
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             TotalScoreValue = value
             TotalScoreBox.Text = TotalScoreValue
         End Set
     End Property
-    Private SubTotalsValue As String() = New String(20) {}
+    Private SubTotalsValue As String() = New String(9) {}
     Public Property SubTotals() As String()
         Get
             Return SubTotalsValue
         End Get
         Set(ByVal value As String())
             SubTotalsValue = value
-            For i = 0 To 10
-                FrameBoxes(i).SubTotal = value(i)
-            Next
+            F1.SubTotal = value(0)
+            F2.SubTotal = value(1)
+            F3.SubTotal = value(2)
+            F4.SubTotal = value(3)
+            F5.SubTotal = value(4)
+            F6.SubTotal = value(5)
+            F7.SubTotal = value(6)
+            F8.SubTotal = value(7)
+            F9.SubTotal = value(8)
+            F10.SubTotal = value(9)
+
         End Set
     End Property
     'Public Property Scores() As Integer() = New Integer(20) {} '21 length array

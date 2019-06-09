@@ -24,7 +24,6 @@ Partial Class PlayerPanelControl
     Private Sub InitializeComponent()
         Me.MainGroupBox = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TotalScoreBox = New System.Windows.Forms.RichTextBox()
         Me.F1 = New SingleFrame.SingleFrame()
         Me.F2 = New SingleFrame.SingleFrame()
         Me.F3 = New SingleFrame.SingleFrame()
@@ -34,6 +33,7 @@ Partial Class PlayerPanelControl
         Me.F7 = New SingleFrame.SingleFrame()
         Me.F8 = New SingleFrame.SingleFrame()
         Me.F9 = New SingleFrame.SingleFrame()
+        Me.TotalScoreBox = New System.Windows.Forms.RichTextBox()
         Me.F10 = New SingleFrame.SingleFrame()
         Me.MainGroupBox.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -42,6 +42,7 @@ Partial Class PlayerPanelControl
         'MainGroupBox
         '
         Me.MainGroupBox.Controls.Add(Me.TableLayoutPanel1)
+        Me.MainGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainGroupBox.Location = New System.Drawing.Point(8, 8)
         Me.MainGroupBox.Name = "MainGroupBox"
         Me.MainGroupBox.Size = New System.Drawing.Size(939, 140)
@@ -82,19 +83,9 @@ Partial Class PlayerPanelControl
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(935, 106)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'TotalScoreBox
-        '
-        Me.TotalScoreBox.Location = New System.Drawing.Point(843, 3)
-        Me.TotalScoreBox.Name = "TotalScoreBox"
-        Me.TotalScoreBox.ReadOnly = True
-        Me.TotalScoreBox.Size = New System.Drawing.Size(79, 100)
-        Me.TotalScoreBox.TabIndex = 9
-        Me.TotalScoreBox.Text = ""
-        '
         'F1
         '
         Me.F1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F1.Bowl3Score = Nothing
         Me.F1.IsFrame10Visible = False
         Me.F1.Location = New System.Drawing.Point(3, 3)
         Me.F1.Name = "F1"
@@ -106,7 +97,6 @@ Partial Class PlayerPanelControl
         'F2
         '
         Me.F2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F2.Bowl3Score = Nothing
         Me.F2.IsFrame10Visible = False
         Me.F2.Location = New System.Drawing.Point(87, 3)
         Me.F2.Name = "F2"
@@ -118,7 +108,6 @@ Partial Class PlayerPanelControl
         'F3
         '
         Me.F3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F3.Bowl3Score = Nothing
         Me.F3.IsFrame10Visible = False
         Me.F3.Location = New System.Drawing.Point(171, 3)
         Me.F3.Name = "F3"
@@ -130,7 +119,6 @@ Partial Class PlayerPanelControl
         'F4
         '
         Me.F4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F4.Bowl3Score = Nothing
         Me.F4.IsFrame10Visible = False
         Me.F4.Location = New System.Drawing.Point(255, 3)
         Me.F4.Name = "F4"
@@ -142,7 +130,6 @@ Partial Class PlayerPanelControl
         'F5
         '
         Me.F5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F5.Bowl3Score = Nothing
         Me.F5.IsFrame10Visible = False
         Me.F5.Location = New System.Drawing.Point(339, 3)
         Me.F5.Name = "F5"
@@ -154,7 +141,6 @@ Partial Class PlayerPanelControl
         'F6
         '
         Me.F6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F6.Bowl3Score = Nothing
         Me.F6.IsFrame10Visible = False
         Me.F6.Location = New System.Drawing.Point(423, 3)
         Me.F6.Name = "F6"
@@ -166,7 +152,6 @@ Partial Class PlayerPanelControl
         'F7
         '
         Me.F7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F7.Bowl3Score = Nothing
         Me.F7.IsFrame10Visible = False
         Me.F7.Location = New System.Drawing.Point(507, 3)
         Me.F7.Name = "F7"
@@ -178,7 +163,6 @@ Partial Class PlayerPanelControl
         'F8
         '
         Me.F8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F8.Bowl3Score = Nothing
         Me.F8.IsFrame10Visible = False
         Me.F8.Location = New System.Drawing.Point(591, 3)
         Me.F8.Name = "F8"
@@ -190,7 +174,6 @@ Partial Class PlayerPanelControl
         'F9
         '
         Me.F9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F9.Bowl3Score = Nothing
         Me.F9.IsFrame10Visible = False
         Me.F9.Location = New System.Drawing.Point(675, 3)
         Me.F9.Name = "F9"
@@ -199,10 +182,18 @@ Partial Class PlayerPanelControl
         Me.F9.SubTotal = ""
         Me.F9.TabIndex = 8
         '
+        'TotalScoreBox
+        '
+        Me.TotalScoreBox.Location = New System.Drawing.Point(843, 3)
+        Me.TotalScoreBox.Name = "TotalScoreBox"
+        Me.TotalScoreBox.ReadOnly = True
+        Me.TotalScoreBox.Size = New System.Drawing.Size(79, 100)
+        Me.TotalScoreBox.TabIndex = 9
+        Me.TotalScoreBox.Text = ""
+        '
         'F10
         '
         Me.F10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F10.Bowl3Score = Nothing
         Me.F10.IsFrame10Visible = True
         Me.F10.Location = New System.Drawing.Point(759, 3)
         Me.F10.Name = "F10"
