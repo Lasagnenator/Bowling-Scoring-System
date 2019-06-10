@@ -4,7 +4,7 @@
     Public CurrentFrame As Integer = 0 'Current frame number
     Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
     Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 9) {}
-    Public TempScores As String() = New String(20) {}
+    Public TempScores As String() = New String(20) {} 'Used to make the Scores property function as intended.
     Public Enum ValidScores
         Miss
         One
@@ -35,6 +35,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PlayerNumDialog.ShowDialog()
+        'Then a function to let players input names
         PlayerPanel1.Scores(0) = 1
     End Sub
     Public Sub MakePanels(ByVal num As Integer)
@@ -75,14 +76,12 @@
 
     Public Sub AddScore(ByVal Score As Integer)
         DisplayAndUpdateScores(Score)
-        Dim a = SelectPlayer(CurrentPlayer).Frames(CurrentFrame)
         If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
             If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
                 CurrentFrameBowl += 1
                 DisplayAndUpdateScores(ValidScores.Miss)
                 'SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores(CurrentFrameBowl) = "-"
             End If
-
         End If
         UpdatePlayer(CurrentPlayer, Score)
     End Sub
@@ -93,7 +92,6 @@
             If Not CurrentFrame = 9 Then 'Not in frame 10
                 IncrementNextPlayer()
             End If
-
         End If
         If CurrentFrameBowl > 1 Then 'bowl 3
             If Not CurrentFrame = 9 Then 'Not in Frame 10
@@ -112,11 +110,9 @@
         End If
         If CurrentFrame > 9 Then 'This should always occur
             'Game Ended
+            'This will get changed later
             MessageBox.Show("Player 1 Won", "Game Over")
         End If
-        'DisplayScore(0, 2, "3", "4", SubTotal:="7")
-        'PlayerScoreBoxes(0, 1).Text = FormatOutput.FormatScores("a", "b", SubTotal:="ab")
-        'P1F2.Text = FormatOutput.FormatScores("a", "b", SubTotal:="cb")
     End Sub
     Public Function SelectPlayer(ByVal Player As Integer) As PlayerPanelControl.PlayerPanelControl
         Select Case Player
@@ -128,8 +124,6 @@
                 Return PlayerPanel3
             Case 3
                 Return PlayerPanel4
-            Case Else
-
         End Select
     End Function
     Public Sub IncrementNextPlayer()

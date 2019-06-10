@@ -45,7 +45,7 @@
             Bowl3.Visible = False
             Bowl2.SelectionAlignment = HorizontalAlignment.Center
             ReDim ScoresValue(1)
-        Else
+        Else 'Add the bowl 3 part again
             Bowl3.Visible = True
             Bowl2.SelectionAlignment = HorizontalAlignment.Left
             ReDim ScoresValue(2)

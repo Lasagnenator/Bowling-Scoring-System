@@ -1,5 +1,4 @@
-﻿Option Infer On
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 
 Public Class PlayerPanelControl
     'Visible property is already made.
@@ -36,8 +35,6 @@ Public Class PlayerPanelControl
                     Return F9
                 Case 9
                     Return F10
-                Case Else
-
             End Select
         End Get
     End Property
@@ -49,8 +46,8 @@ Public Class PlayerPanelControl
         End Get
         Set(value As String())
             ScoresValue = value
-            F1.Scores = New String() {ScoresValue(0), ScoresValue(1)}
-            F2.Scores = New String() {ScoresValue(2), ScoresValue(3)}
+            F1.Scores = {ScoresValue(0), ScoresValue(1)}
+            F2.Scores = {ScoresValue(2), ScoresValue(3)}
             F3.Scores = {ScoresValue(4), ScoresValue(5)}
             F4.Scores = {ScoresValue(6), ScoresValue(7)}
             F5.Scores = {ScoresValue(8), ScoresValue(9)}
@@ -91,5 +88,8 @@ Public Class PlayerPanelControl
 
         End Set
     End Property
-    'Public Property Scores() As Integer() = New Integer(20) {} '21 length array
+
+    Private Sub PlayerPanelControl_ControlAdded(sender As Object, e As ControlEventArgs) Handles Me.ControlAdded
+        TotalScoreBox.SelectionAlignment = HorizontalAlignment.Center
+    End Sub
 End Class
