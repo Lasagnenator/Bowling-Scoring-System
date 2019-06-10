@@ -5,7 +5,7 @@ Public Class Form1
     Public TotalPlayers As Integer
     Public CurrentFrame As Integer = 0 'Current frame number
     Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
-    Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 9) {}
+    Public PreviousSubTotals As Integer() = New Integer(9) {}
     Public Enum ValidScores
         Miss
         One
@@ -137,9 +137,14 @@ Public Class Form1
         TempScores(CurrentFrameBowl) = ScoreToText(Score)
         SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores = TempScores
     End Sub
-    Public Sub DisplayAndUpdateSubTotals(Subtotal As Integer, Frame As Integer)
+    Public Sub DisplayAndUpdateSubTotals(ByVal Subtotal As Integer, Frame As Integer)
         'Same problem as above
+        PreviousSubTotals(Frame) = Subtotal
+        'Dim Temp = SelectPlayer(CurrentPlayer).SubTotals
         Dim Temp = SelectPlayer(CurrentPlayer).SubTotals
+        For i = 0 To Frame - 1
+            Subtotal += PreviousSubTotals(i)
+        Next
         Temp(Frame) = Subtotal
         SelectPlayer(CurrentPlayer).SubTotals = Temp
     End Sub
@@ -179,10 +184,10 @@ Public Class Form1
             If i = 9 Then 'bowl 1 in frame 10
                 If ((b1 = b2) And (b2 = ValidScores.Strike)) Then 'b1=b2=strike
                     Subtotal = b1 + (2 * b2) + (3 * b3)
-                ElseIf b1 = ValidScores.Strike Then
+                ElseIf b1 = ValidScores.Strike Then 'b1=strike
                     Subtotal = b1 + (2 * (b2 + b3))
-                ElseIf b2 = ValidScores.Spare Then
-                    Subtotal = 10 + (Subtotal * b3)
+                ElseIf b2 = ValidScores.Spare Then 'b2=spare
+                    Subtotal = 10 + (2 * b3)
                 Else
                     Subtotal = b1 + b2
                 End If
@@ -191,6 +196,8 @@ Public Class Form1
                     Subtotal = b1 + b3 + b4
                 ElseIf (b1 = b3) And (b3 = ValidScores.Strike) Then 'b1=b3=strike
                     Subtotal = b1 + b3 + b5
+                ElseIf (b1 = ValidScores.Strike) And (b4 = ValidScores.Spare) Then 'b1=strike & b4=spare
+                    Subtotal = b1 + 10
                 ElseIf (b1 = ValidScores.Strike) Then 'b1=strike
                     Subtotal = b1 + b3 + b4
                 ElseIf (b2 = ValidScores.Spare) Then 'b2=spare
@@ -201,5 +208,37 @@ Public Class Form1
             End If
             DisplayAndUpdateSubTotals(Subtotal, i)
         Next
+    End Sub
+
+    Private Sub Form1_KeyUp(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        Select Case e.KeyChar
+            Case "-"
+                RadioButton0.Checked = True
+            Case "1"
+                RadioButton1.Checked = True
+            Case "2"
+                RadioButton2.Checked = True
+            Case "3"
+                RadioButton3.Checked = True
+            Case "4"
+                RadioButton4.Checked = True
+            Case "5"
+                RadioButton5.Checked = True
+            Case "6"
+                RadioButton6.Checked = True
+            Case "7"
+                RadioButton7.Checked = True
+            Case "8"
+                RadioButton8.Checked = True
+            Case "9"
+                RadioButton9.Checked = True
+            Case "x"
+                RadioButton10.Checked = True
+            Case "/"
+                RadioButton11.Checked = True
+            Case vbCrLf
+                EnterScoreButton_Click(New Object, New EventArgs())
+        End Select
+        Me.Refresh()
     End Sub
 End Class

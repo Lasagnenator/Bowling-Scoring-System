@@ -362,6 +362,7 @@ Partial Class Form1
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.RadioButton0)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Bowling Scoring System"
