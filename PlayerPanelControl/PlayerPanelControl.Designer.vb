@@ -41,11 +41,12 @@ Partial Class PlayerPanelControl
         '
         'MainGroupBox
         '
+        Me.MainGroupBox.AutoSize = True
         Me.MainGroupBox.Controls.Add(Me.TableLayoutPanel1)
         Me.MainGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainGroupBox.Location = New System.Drawing.Point(8, 8)
         Me.MainGroupBox.Name = "MainGroupBox"
-        Me.MainGroupBox.Size = New System.Drawing.Size(939, 140)
+        Me.MainGroupBox.Size = New System.Drawing.Size(947, 166)
         Me.MainGroupBox.TabIndex = 1
         Me.MainGroupBox.TabStop = False
         Me.MainGroupBox.Text = "GroupBox1"
@@ -90,7 +91,7 @@ Partial Class PlayerPanelControl
         Me.F1.Location = New System.Drawing.Point(3, 3)
         Me.F1.Name = "F1"
         Me.F1.Scores = New String() {Nothing, Nothing}
-        Me.F1.Size = New System.Drawing.Size(78, 100)
+        Me.F1.Size = New System.Drawing.Size(76, 100)
         Me.F1.SubTotal = ""
         Me.F1.TabIndex = 0
         '
@@ -101,7 +102,7 @@ Partial Class PlayerPanelControl
         Me.F2.Location = New System.Drawing.Point(87, 3)
         Me.F2.Name = "F2"
         Me.F2.Scores = New String() {Nothing, Nothing}
-        Me.F2.Size = New System.Drawing.Size(78, 100)
+        Me.F2.Size = New System.Drawing.Size(76, 100)
         Me.F2.SubTotal = ""
         Me.F2.TabIndex = 1
         '
@@ -112,7 +113,7 @@ Partial Class PlayerPanelControl
         Me.F3.Location = New System.Drawing.Point(171, 3)
         Me.F3.Name = "F3"
         Me.F3.Scores = New String() {Nothing, Nothing}
-        Me.F3.Size = New System.Drawing.Size(78, 100)
+        Me.F3.Size = New System.Drawing.Size(76, 100)
         Me.F3.SubTotal = ""
         Me.F3.TabIndex = 2
         '
@@ -123,7 +124,7 @@ Partial Class PlayerPanelControl
         Me.F4.Location = New System.Drawing.Point(255, 3)
         Me.F4.Name = "F4"
         Me.F4.Scores = New String() {Nothing, Nothing}
-        Me.F4.Size = New System.Drawing.Size(78, 100)
+        Me.F4.Size = New System.Drawing.Size(76, 100)
         Me.F4.SubTotal = ""
         Me.F4.TabIndex = 3
         '
@@ -134,7 +135,7 @@ Partial Class PlayerPanelControl
         Me.F5.Location = New System.Drawing.Point(339, 3)
         Me.F5.Name = "F5"
         Me.F5.Scores = New String() {Nothing, Nothing}
-        Me.F5.Size = New System.Drawing.Size(78, 100)
+        Me.F5.Size = New System.Drawing.Size(76, 100)
         Me.F5.SubTotal = ""
         Me.F5.TabIndex = 4
         '
@@ -145,7 +146,7 @@ Partial Class PlayerPanelControl
         Me.F6.Location = New System.Drawing.Point(423, 3)
         Me.F6.Name = "F6"
         Me.F6.Scores = New String() {Nothing, Nothing}
-        Me.F6.Size = New System.Drawing.Size(78, 100)
+        Me.F6.Size = New System.Drawing.Size(76, 100)
         Me.F6.SubTotal = ""
         Me.F6.TabIndex = 5
         '
@@ -156,7 +157,7 @@ Partial Class PlayerPanelControl
         Me.F7.Location = New System.Drawing.Point(507, 3)
         Me.F7.Name = "F7"
         Me.F7.Scores = New String() {Nothing, Nothing}
-        Me.F7.Size = New System.Drawing.Size(78, 100)
+        Me.F7.Size = New System.Drawing.Size(76, 100)
         Me.F7.SubTotal = ""
         Me.F7.TabIndex = 6
         '
@@ -167,7 +168,7 @@ Partial Class PlayerPanelControl
         Me.F8.Location = New System.Drawing.Point(591, 3)
         Me.F8.Name = "F8"
         Me.F8.Scores = New String() {Nothing, Nothing}
-        Me.F8.Size = New System.Drawing.Size(78, 100)
+        Me.F8.Size = New System.Drawing.Size(76, 100)
         Me.F8.SubTotal = ""
         Me.F8.TabIndex = 7
         '
@@ -178,7 +179,7 @@ Partial Class PlayerPanelControl
         Me.F9.Location = New System.Drawing.Point(675, 3)
         Me.F9.Name = "F9"
         Me.F9.Scores = New String() {Nothing, Nothing}
-        Me.F9.Size = New System.Drawing.Size(78, 100)
+        Me.F9.Size = New System.Drawing.Size(76, 100)
         Me.F9.SubTotal = ""
         Me.F9.TabIndex = 8
         '
@@ -187,7 +188,7 @@ Partial Class PlayerPanelControl
         Me.TotalScoreBox.Location = New System.Drawing.Point(843, 3)
         Me.TotalScoreBox.Name = "TotalScoreBox"
         Me.TotalScoreBox.ReadOnly = True
-        Me.TotalScoreBox.Size = New System.Drawing.Size(79, 100)
+        Me.TotalScoreBox.Size = New System.Drawing.Size(76, 100)
         Me.TotalScoreBox.TabIndex = 9
         Me.TotalScoreBox.Text = ""
         '
@@ -198,7 +199,7 @@ Partial Class PlayerPanelControl
         Me.F10.Location = New System.Drawing.Point(759, 3)
         Me.F10.Name = "F10"
         Me.F10.Scores = New String() {Nothing, Nothing, Nothing}
-        Me.F10.Size = New System.Drawing.Size(78, 100)
+        Me.F10.Size = New System.Drawing.Size(76, 100)
         Me.F10.SubTotal = Nothing
         Me.F10.TabIndex = 10
         '
@@ -208,11 +209,12 @@ Partial Class PlayerPanelControl
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.MainGroupBox)
         Me.Name = "PlayerPanelControl"
-        Me.Size = New System.Drawing.Size(950, 151)
+        Me.Size = New System.Drawing.Size(966, 180)
         Me.MainGroupBox.ResumeLayout(False)
         Me.MainGroupBox.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 

@@ -13,6 +13,34 @@ Public Class PlayerPanelControl
             NameValue = value
         End Set
     End Property
+    Public ReadOnly Property Frames(ByVal Index As Integer) As SingleFrame.SingleFrame
+        Get
+            Select Case Index
+                Case 0
+                    Return F1
+                Case 1
+                    Return F2
+                Case 2
+                    Return F3
+                Case 3
+                    Return F4
+                Case 4
+                    Return F5
+                Case 5
+                    Return F6
+                Case 6
+                    Return F7
+                Case 7
+                    Return F8
+                Case 8
+                    Return F9
+                Case 9
+                    Return F10
+                Case Else
+
+            End Select
+        End Get
+    End Property
     Private ScoresValue As String() = New String(20) {} '21 length array
     Public Property Scores() As String()
         Get

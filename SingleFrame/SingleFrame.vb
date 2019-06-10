@@ -46,11 +46,9 @@
         If value = False Then 'Remove bowl 3 part
             Bowl3.Visible = False
             Bowl2.SelectionAlignment = HorizontalAlignment.Center
-            ReDim ScoresValue(1)
         Else
             Bowl3.Visible = True
             Bowl2.SelectionAlignment = HorizontalAlignment.Left
-            ReDim ScoresValue(2)
         End If
     End Sub
 End Class

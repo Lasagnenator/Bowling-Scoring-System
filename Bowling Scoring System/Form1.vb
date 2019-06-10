@@ -2,11 +2,8 @@
     Public CurrentPlayer As Integer = 0
     Public TotalPlayers As Integer
     Public CurrentFrame As Integer = 0 'Current frame number
-    Public CurrentBowl As Integer = 0 'Where we are in the Scores variable horizontally
     Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
-    'Public Scores As Integer(,) = New Integer(3, 20) {} 'Make the array 4x21 (max scores x players) and Initialise with zeros
     Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 9) {}
-    Public Scores As PlayerPanelControl.PlayerPanelControl() = New PlayerPanelControl.PlayerPanelControl(4) {}
     Public Enum ValidScores
         Miss
         One
@@ -36,14 +33,13 @@
         RadioButton11}
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Scores = {PlayerPanel1, PlayerPanel2, PlayerPanel3, PlayerPanel4}
         PlayerNumDialog.ShowDialog()
         PlayerPanel1.Scores(0) = 1
     End Sub
     Public Sub MakePanels(ByVal num As Integer)
         For i = 0 To 3
             If i >= num Then
-                Scores(i).Visible = False
+                SelectPlayer(i).Visible = False
             End If
         Next
     End Sub
@@ -77,54 +73,65 @@
     End Sub
 
     Public Sub AddScore(ByVal Score As Integer)
-        Scores(CurrentPlayer).Scores(CurrentBowl) = FormatOutput.ScoreToText(Score)
+        SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores(CurrentFrameBowl) = FormatOutput.ScoreToText(Score)
+        Dim a = SelectPlayer(CurrentPlayer).Frames(CurrentFrame)
         If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
-            If Not CurrentFrame = 9 Then
-                CurrentBowl += 1
-                Scores(CurrentPlayer).Scores(CurrentBowl) = "-"
+            If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
+                CurrentFrameBowl += 1
+                SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores(CurrentFrameBowl) = "-"
             End If
 
         End If
         UpdateScores(CurrentPlayer, Score)
-        CurrentBowl += 1
     End Sub
 
     Public Sub UpdateScores(ByVal Player As Integer, ByVal Score As Integer)
         CurrentFrameBowl += 1
         If Score = ValidScores.Strike Then
             If Not CurrentFrame = 9 Then 'Not in frame 10
-                CurrentFrameBowl = 0 'It should already be zero but just making sure
-                CurrentPlayer += 1
+                IncrementNextPlayer()
             End If
 
         End If
-        If CurrentFrameBowl > 1 Then
+        If CurrentFrameBowl > 1 Then 'bowl 3
             If Not CurrentFrame = 9 Then 'Not in Frame 10
-                CurrentFrameBowl = 0
-                CurrentPlayer += 1
-                CurrentBowl -= 2
-            ElseIf CurrentFrameBowl > 2 Then 'In Frame 10 and bowl 3
-                CurrentFrameBowl = 0
-                CurrentPlayer += 1
-                CurrentBowl -= 3
+                IncrementNextPlayer()
+            ElseIf CurrentFrameBowl > 2 Then 'In Frame 10 and bowl 4
+                IncrementNextPlayer()
             ElseIf CurrentFrame = 9 Then 'Did not earn the third bowl in frame 10
-                If Not (Scores(CurrentPlayer).Scores(18) = ValidScores.Strike Or Score = ValidScores.Spare) Then
-                    CurrentFrameBowl = 0
-                    CurrentPlayer += 1
-                    CurrentBowl -= 2
+                If Not (SelectPlayer(CurrentPlayer).Frames(9).Scores(0) = ValidScores.Strike Or Score = ValidScores.Spare) Then
+                    IncrementNextPlayer()
                 End If
             End If
         End If
         If CurrentPlayer >= TotalPlayers Then
-            CurrentPlayer = 0
-            CurrentFrame += 1
+            CurrentPlayer = 0 'Go back to player 1
+            CurrentFrame += 1 'Increment to next frame
         End If
-        If CurrentBowl > 20 Or CurrentFrame > 9 Then 'This should always occur
+        If CurrentFrame > 9 Then 'This should always occur
             'Game Ended
             MessageBox.Show("Player 1 Won", "Game Over")
         End If
         'DisplayScore(0, 2, "3", "4", SubTotal:="7")
         'PlayerScoreBoxes(0, 1).Text = FormatOutput.FormatScores("a", "b", SubTotal:="ab")
         'P1F2.Text = FormatOutput.FormatScores("a", "b", SubTotal:="cb")
+    End Sub
+    Public Function SelectPlayer(ByVal Player As Integer) As PlayerPanelControl.PlayerPanelControl
+        Select Case Player
+            Case 0
+                Return PlayerPanel1
+            Case 1
+                Return PlayerPanel2
+            Case 2
+                Return PlayerPanel3
+            Case 3
+                Return PlayerPanel4
+            Case Else
+
+        End Select
+    End Function
+    Public Sub IncrementNextPlayer()
+        CurrentFrameBowl = 0
+        CurrentPlayer += 1
     End Sub
 End Class
