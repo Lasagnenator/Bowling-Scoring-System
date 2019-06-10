@@ -53,7 +53,6 @@ Partial Class SingleFrame
         '
         'SubTotalBox
         '
-        Me.SubTotalBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SubTotalBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.SubTotalBox.Location = New System.Drawing.Point(35, 49)
         Me.SubTotalBox.Name = "SubTotalBox"

@@ -13,14 +13,14 @@
             End If
         End Set
     End Property
-    Private SubTotalValue As String = New String("0")
+    Private SubTotalValue As String = ""
     Public Property SubTotal() As String
         Get
             Return SubTotalValue
         End Get
         Set(ByVal value As String)
             SubTotalValue = value
-            SubTotalBox.Text = SubTotalValue
+            SubTotalBox.Text = vbCrLf + SubTotalValue
         End Set
     End Property
     Private IsFrame10Value As Boolean = True

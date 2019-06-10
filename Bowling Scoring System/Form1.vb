@@ -6,7 +6,6 @@ Public Class Form1
     Public CurrentFrame As Integer = 0 'Current frame number
     Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
     Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 9) {}
-    Public TempScores As String() = New String(20) {} 'Used to make the Scores property function as intended.
     Public Enum ValidScores
         Miss
         One
@@ -84,7 +83,7 @@ Public Class Form1
                 'DisplayAndUpdateScores(ValidScores.Miss)
             End If
         End If
-        'CalculateSubtotals
+        CalculateSubtotals()
         UpdatePlayer(CurrentPlayer, Score)
     End Sub
 
@@ -133,9 +132,16 @@ Public Class Form1
         CurrentPlayer += 1
     End Sub
     Public Sub DisplayAndUpdateScores(Score As Integer)
-        TempScores = SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores
+        'We need to do this as the property will not get updated properly if we try to edit the particular score directly
+        Dim TempScores = SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores
         TempScores(CurrentFrameBowl) = ScoreToText(Score)
         SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores = TempScores
+    End Sub
+    Public Sub DisplayAndUpdateSubTotals(Subtotal As Integer, Frame As Integer)
+        'Same problem as above
+        Dim Temp = SelectPlayer(CurrentPlayer).SubTotals
+        Temp(Frame) = Subtotal
+        SelectPlayer(CurrentPlayer).SubTotals = Temp
     End Sub
     Public Sub CalculateSubtotals()
         Dim b1 As Integer
@@ -193,6 +199,7 @@ Public Class Form1
                     Subtotal = b1 + b2
                 End If
             End If
+            DisplayAndUpdateSubTotals(Subtotal, i)
         Next
     End Sub
 End Class
