@@ -65,7 +65,7 @@ Public Class PlayerPanelControl
         End Get
         Set(ByVal value As Integer)
             TotalScoreValue = value
-            TotalScoreBox.Text = TotalScoreValue
+            TotalScoreBox.Text = vbCrLf + Convert.ToString(TotalScoreValue)
         End Set
     End Property
     Private SubTotalsValue As String() = New String(9) {}

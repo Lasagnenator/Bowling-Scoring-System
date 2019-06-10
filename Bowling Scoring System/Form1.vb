@@ -84,6 +84,7 @@ Public Class Form1
             End If
         End If
         CalculateSubtotals()
+        DisplayAndUpdateTotals()
         UpdatePlayer(CurrentPlayer, Score)
     End Sub
 
@@ -147,6 +148,13 @@ Public Class Form1
         Next
         Temp(Frame) = Subtotal
         SelectPlayer(CurrentPlayer).SubTotals = Temp
+    End Sub
+    Public Sub DisplayAndUpdateTotals()
+        Dim total = 0
+        For Each score In PreviousSubTotals
+            total += score
+        Next
+        SelectPlayer(CurrentPlayer).TotalScore = total
     End Sub
     Public Sub CalculateSubtotals()
         Dim b1 As Integer
