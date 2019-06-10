@@ -8,14 +8,12 @@
             ScoresValue = value
             Bowl1.Text = ScoresValue(0)
             Bowl2.Text = ScoresValue(1)
-            Try
+            If IsFrame10Value Then
                 Bowl3.Text = ScoresValue(2)
-            Catch ex As IndexOutOfRangeException
-
-            End Try
+            End If
         End Set
     End Property
-    Private SubTotalValue As String = 0
+    Private SubTotalValue As String = New String("0")
     Public Property SubTotal() As String
         Get
             Return SubTotalValue
@@ -46,9 +44,11 @@
         If value = False Then 'Remove bowl 3 part
             Bowl3.Visible = False
             Bowl2.SelectionAlignment = HorizontalAlignment.Center
+            ReDim ScoresValue(1)
         Else
             Bowl3.Visible = True
             Bowl2.SelectionAlignment = HorizontalAlignment.Left
+            ReDim ScoresValue(2)
         End If
     End Sub
 End Class

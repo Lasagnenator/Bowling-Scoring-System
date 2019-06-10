@@ -30,8 +30,6 @@ Partial Class SingleFrame
         '
         'Bowl2
         '
-        Me.Bowl2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Bowl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Bowl2.Location = New System.Drawing.Point(35, 0)
         Me.Bowl2.Name = "Bowl2"
@@ -44,9 +42,6 @@ Partial Class SingleFrame
         '
         'Bowl1
         '
-        Me.Bowl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Bowl1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Bowl1.Location = New System.Drawing.Point(-1, 3)
         Me.Bowl1.Name = "Bowl1"
@@ -58,9 +53,7 @@ Partial Class SingleFrame
         '
         'SubTotalBox
         '
-        Me.SubTotalBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SubTotalBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SubTotalBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.SubTotalBox.Location = New System.Drawing.Point(35, 49)
         Me.SubTotalBox.Name = "SubTotalBox"
@@ -72,6 +65,7 @@ Partial Class SingleFrame
         '
         'Bowl3
         '
+        Me.Bowl3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Bowl3.Location = New System.Drawing.Point(57, 0)
         Me.Bowl3.Name = "Bowl3"
         Me.Bowl3.ReadOnly = True
@@ -86,8 +80,8 @@ Partial Class SingleFrame
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Controls.Add(Me.Bowl3)
         Me.Controls.Add(Me.Bowl2)
-        Me.Controls.Add(Me.SubTotalBox)
         Me.Controls.Add(Me.Bowl1)
+        Me.Controls.Add(Me.SubTotalBox)
         Me.Name = "SingleFrame"
         Me.Size = New System.Drawing.Size(78, 100)
         Me.ResumeLayout(False)

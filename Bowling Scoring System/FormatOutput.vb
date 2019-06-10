@@ -62,4 +62,34 @@
                 Return ""
         End Select
     End Function
+    Public Shared Function TextToScore(ByVal Text As String) As Integer
+        Select Case Text
+            Case "-"
+                Return Form1.ValidScores.Miss
+            Case "1"
+                Return Form1.ValidScores.One
+            Case "2"
+                Return Form1.ValidScores.Two
+            Case "3"
+                Return Form1.ValidScores.Three
+            Case "4"
+                Return Form1.ValidScores.Four
+            Case "5"
+                Return Form1.ValidScores.Five
+            Case "6"
+                Return Form1.ValidScores.Six
+            Case "7"
+                Return Form1.ValidScores.Seven
+            Case "8"
+                Return Form1.ValidScores.Eight
+            Case "9"
+                Return Form1.ValidScores.Nine
+            Case "X"
+                Return Form1.ValidScores.Strike
+            Case "/"
+                Return Form1.ValidScores.Spare
+            Case Else
+                Return Form1.ValidScores.Miss
+        End Select
+    End Function
 End Class

@@ -41,15 +41,16 @@ Public Class PlayerPanelControl
             End Select
         End Get
     End Property
-    Private ScoresValue As String() = New String(20) {} '21 length array
+    Private ScoresValue As String() = New String(20) {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+    '21 length array
     Public Property Scores() As String()
         Get
             Return ScoresValue
         End Get
         Set(value As String())
             ScoresValue = value
-            F1.Scores = {ScoresValue(0), ScoresValue(1)}
-            F2.Scores = {ScoresValue(2), ScoresValue(3)}
+            F1.Scores = New String() {ScoresValue(0), ScoresValue(1)}
+            F2.Scores = New String() {ScoresValue(2), ScoresValue(3)}
             F3.Scores = {ScoresValue(4), ScoresValue(5)}
             F4.Scores = {ScoresValue(6), ScoresValue(7)}
             F5.Scores = {ScoresValue(8), ScoresValue(9)}

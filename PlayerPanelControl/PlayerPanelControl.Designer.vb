@@ -24,6 +24,7 @@ Partial Class PlayerPanelControl
     Private Sub InitializeComponent()
         Me.MainGroupBox = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TotalScoreBox = New System.Windows.Forms.RichTextBox()
         Me.F1 = New SingleFrame.SingleFrame()
         Me.F2 = New SingleFrame.SingleFrame()
         Me.F3 = New SingleFrame.SingleFrame()
@@ -33,7 +34,6 @@ Partial Class PlayerPanelControl
         Me.F7 = New SingleFrame.SingleFrame()
         Me.F8 = New SingleFrame.SingleFrame()
         Me.F9 = New SingleFrame.SingleFrame()
-        Me.TotalScoreBox = New System.Windows.Forms.RichTextBox()
         Me.F10 = New SingleFrame.SingleFrame()
         Me.MainGroupBox.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -83,6 +83,15 @@ Partial Class PlayerPanelControl
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(935, 106)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'TotalScoreBox
+        '
+        Me.TotalScoreBox.Location = New System.Drawing.Point(843, 3)
+        Me.TotalScoreBox.Name = "TotalScoreBox"
+        Me.TotalScoreBox.ReadOnly = True
+        Me.TotalScoreBox.Size = New System.Drawing.Size(76, 100)
+        Me.TotalScoreBox.TabIndex = 9
+        Me.TotalScoreBox.Text = ""
         '
         'F1
         '
@@ -183,15 +192,6 @@ Partial Class PlayerPanelControl
         Me.F9.SubTotal = ""
         Me.F9.TabIndex = 8
         '
-        'TotalScoreBox
-        '
-        Me.TotalScoreBox.Location = New System.Drawing.Point(843, 3)
-        Me.TotalScoreBox.Name = "TotalScoreBox"
-        Me.TotalScoreBox.ReadOnly = True
-        Me.TotalScoreBox.Size = New System.Drawing.Size(76, 100)
-        Me.TotalScoreBox.TabIndex = 9
-        Me.TotalScoreBox.Text = ""
-        '
         'F10
         '
         Me.F10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -199,7 +199,7 @@ Partial Class PlayerPanelControl
         Me.F10.Location = New System.Drawing.Point(759, 3)
         Me.F10.Name = "F10"
         Me.F10.Scores = New String() {Nothing, Nothing, Nothing}
-        Me.F10.Size = New System.Drawing.Size(76, 100)
+        Me.F10.Size = New System.Drawing.Size(77, 100)
         Me.F10.SubTotal = Nothing
         Me.F10.TabIndex = 10
         '

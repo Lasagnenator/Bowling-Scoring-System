@@ -35,7 +35,6 @@ Partial Class Form1
         Me.RadioButton10 = New System.Windows.Forms.RadioButton()
         Me.RadioButton11 = New System.Windows.Forms.RadioButton()
         Me.EnterScoreButton = New System.Windows.Forms.Button()
-        Me.PlayerPanel1 = New PlayerPanelControl.PlayerPanelControl()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -47,9 +46,10 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.PlayerPanel2 = New PlayerPanelControl.PlayerPanelControl()
-        Me.PlayerPanel3 = New PlayerPanelControl.PlayerPanelControl()
         Me.PlayerPanel4 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel3 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel2 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel1 = New PlayerPanelControl.PlayerPanelControl()
         Me.SuspendLayout()
         '
         'RadioButton0
@@ -185,17 +185,6 @@ Partial Class Form1
         Me.EnterScoreButton.Text = "Enter Score"
         Me.EnterScoreButton.UseVisualStyleBackColor = True
         '
-        'PlayerPanel1
-        '
-        Me.PlayerPanel1.Location = New System.Drawing.Point(12, 27)
-        Me.PlayerPanel1.Name = "PlayerPanel1"
-        Me.PlayerPanel1.PlayerName = "Player 1"
-        Me.PlayerPanel1.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel1.Size = New System.Drawing.Size(998, 151)
-        Me.PlayerPanel1.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel1.TabIndex = 15
-        Me.PlayerPanel1.TotalScore = 0
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -280,7 +269,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(812, 15)
+        Me.Label10.Location = New System.Drawing.Point(818, 15)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(36, 25)
         Me.Label10.TabIndex = 26
@@ -289,22 +278,22 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(880, 14)
+        Me.Label11.Location = New System.Drawing.Point(886, 14)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 25)
         Me.Label11.TabIndex = 27
         Me.Label11.Text = "Total"
         '
-        'PlayerPanel2
+        'PlayerPanel4
         '
-        Me.PlayerPanel2.Location = New System.Drawing.Point(12, 188)
-        Me.PlayerPanel2.Name = "PlayerPanel2"
-        Me.PlayerPanel2.PlayerName = "Player 2"
-        Me.PlayerPanel2.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel2.Size = New System.Drawing.Size(998, 151)
-        Me.PlayerPanel2.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel2.TabIndex = 28
-        Me.PlayerPanel2.TotalScore = 0
+        Me.PlayerPanel4.Location = New System.Drawing.Point(12, 510)
+        Me.PlayerPanel4.Name = "PlayerPanel4"
+        Me.PlayerPanel4.PlayerName = "Player 4"
+        Me.PlayerPanel4.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel4.Size = New System.Drawing.Size(998, 151)
+        Me.PlayerPanel4.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel4.TabIndex = 30
+        Me.PlayerPanel4.TotalScore = 0
         '
         'PlayerPanel3
         '
@@ -317,16 +306,27 @@ Partial Class Form1
         Me.PlayerPanel3.TabIndex = 29
         Me.PlayerPanel3.TotalScore = 0
         '
-        'PlayerPanel4
+        'PlayerPanel2
         '
-        Me.PlayerPanel4.Location = New System.Drawing.Point(12, 510)
-        Me.PlayerPanel4.Name = "PlayerPanel4"
-        Me.PlayerPanel4.PlayerName = "Player 4"
-        Me.PlayerPanel4.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel4.Size = New System.Drawing.Size(998, 151)
-        Me.PlayerPanel4.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel4.TabIndex = 30
-        Me.PlayerPanel4.TotalScore = 0
+        Me.PlayerPanel2.Location = New System.Drawing.Point(12, 188)
+        Me.PlayerPanel2.Name = "PlayerPanel2"
+        Me.PlayerPanel2.PlayerName = "Player 2"
+        Me.PlayerPanel2.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel2.Size = New System.Drawing.Size(998, 151)
+        Me.PlayerPanel2.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel2.TabIndex = 28
+        Me.PlayerPanel2.TotalScore = 0
+        '
+        'PlayerPanel1
+        '
+        Me.PlayerPanel1.Location = New System.Drawing.Point(12, 27)
+        Me.PlayerPanel1.Name = "PlayerPanel1"
+        Me.PlayerPanel1.PlayerName = "Player 1"
+        Me.PlayerPanel1.Scores = New String() {"1", "2", Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel1.Size = New System.Drawing.Size(998, 151)
+        Me.PlayerPanel1.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel1.TabIndex = 15
+        Me.PlayerPanel1.TotalScore = 0
         '
         'Form1
         '

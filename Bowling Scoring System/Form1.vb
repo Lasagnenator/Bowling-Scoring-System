@@ -4,6 +4,7 @@
     Public CurrentFrame As Integer = 0 'Current frame number
     Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
     Public PlayerScoreBoxes As RichTextBox(,) = New RichTextBox(0, 9) {}
+    Public TempScores As String() = New String(20) {}
     Public Enum ValidScores
         Miss
         One
@@ -73,19 +74,20 @@
     End Sub
 
     Public Sub AddScore(ByVal Score As Integer)
-        SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores(CurrentFrameBowl) = FormatOutput.ScoreToText(Score)
+        DisplayAndUpdateScores(Score)
         Dim a = SelectPlayer(CurrentPlayer).Frames(CurrentFrame)
         If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
             If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
                 CurrentFrameBowl += 1
-                SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores(CurrentFrameBowl) = "-"
+                DisplayAndUpdateScores(ValidScores.Miss)
+                'SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores(CurrentFrameBowl) = "-"
             End If
 
         End If
-        UpdateScores(CurrentPlayer, Score)
+        UpdatePlayer(CurrentPlayer, Score)
     End Sub
 
-    Public Sub UpdateScores(ByVal Player As Integer, ByVal Score As Integer)
+    Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
         CurrentFrameBowl += 1
         If Score = ValidScores.Strike Then
             If Not CurrentFrame = 9 Then 'Not in frame 10
@@ -99,7 +101,7 @@
             ElseIf CurrentFrameBowl > 2 Then 'In Frame 10 and bowl 4
                 IncrementNextPlayer()
             ElseIf CurrentFrame = 9 Then 'Did not earn the third bowl in frame 10
-                If Not (SelectPlayer(CurrentPlayer).Frames(9).Scores(0) = ValidScores.Strike Or Score = ValidScores.Spare) Then
+                If Not (FormatOutput.TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(0)) = ValidScores.Strike Or Score = ValidScores.Spare) Then
                     IncrementNextPlayer()
                 End If
             End If
@@ -133,5 +135,10 @@
     Public Sub IncrementNextPlayer()
         CurrentFrameBowl = 0
         CurrentPlayer += 1
+    End Sub
+    Public Sub DisplayAndUpdateScores(Score As Integer)
+        TempScores = SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores
+        TempScores(CurrentFrameBowl) = FormatOutput.ScoreToText(Score)
+        SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores = TempScores
     End Sub
 End Class
