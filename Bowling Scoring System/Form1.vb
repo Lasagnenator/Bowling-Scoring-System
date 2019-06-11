@@ -86,34 +86,19 @@ Public Class Form1
         CalculateSubtotals()
         DisplayAndUpdateTotals()
         UpdatePlayer(CurrentPlayer, Score)
+        'UpdateButtons(Score)
     End Sub
 
     Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
         CurrentFrameBowl += 1
-        If Score = ValidScores.Strike Then
-            If Not CurrentFrame = 9 Then 'Not in frame 10
+        If ((Score = ValidScores.Strike) And (Not (CurrentFrameBowl = 3))) Or (CurrentFrameBowl = 2) Then
+            If Not ((CurrentFrame = 9) And (EarnedFrame10())) Then
                 IncrementNextPlayer()
             End If
-        End If
-        If CurrentFrameBowl > 1 Then 'bowl 3
-            If Not CurrentFrame = 9 Then 'Not in Frame 10
-                IncrementNextPlayer()
-            ElseIf CurrentFrameBowl > 2 Then 'In Frame 10 and bowl 4
-                IncrementNextPlayer()
-            ElseIf CurrentFrame = 9 Then 'Did not earn the third bowl in frame 10
-                If Not (TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(0)) = ValidScores.Strike Or Score = ValidScores.Spare) Then
-                    IncrementNextPlayer()
-                End If
-            End If
-        End If
-        If CurrentPlayer >= TotalPlayers Then
-            CurrentPlayer = 0 'Go back to player 1
-            CurrentFrame += 1 'Increment to next frame
-        End If
-        If CurrentFrame > 9 Then 'This should always occur
-            'Game Ended
-            'This will get changed later
-            MessageBox.Show("Player 1 Won", "Game Over")
+            CheckFrame()
+        ElseIf Not (CurrentFrameBowl = 1) Then
+            IncrementNextPlayer()
+            CheckFrame()
         End If
     End Sub
     Public Function SelectPlayer(ByVal Player As Integer) As PlayerPanelControl.PlayerPanelControl
@@ -132,6 +117,22 @@ Public Class Form1
         CurrentFrameBowl = 0
         CurrentPlayer += 1
     End Sub
+    Public Sub CheckFrame()
+        If CurrentPlayer >= TotalPlayers Then
+            CurrentPlayer = 0 'Go back to player 1
+            CurrentFrame += 1 'Increment to next frame
+        End If
+        If CurrentFrame > 9 Then 'This should always occur
+            'Game Ended
+            'This will get changed later
+            MessageBox.Show("Player 1 Won", "Game Over")
+        End If
+    End Sub
+    Public Function EarnedFrame10() As Boolean
+        Dim t1 = TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(0)) = ValidScores.Strike
+        Dim t2 = TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(1)) = ValidScores.Spare
+        Return t1 Or t2
+    End Function
     Public Sub DisplayAndUpdateScores(Score As Integer)
         'We need to do this as the property will not get updated properly if we try to edit the particular score directly
         Dim TempScores = SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores
@@ -216,6 +217,35 @@ Public Class Form1
             End If
             DisplayAndUpdateSubTotals(Subtotal, i)
         Next
+    End Sub
+    Public Sub UpdateButtons(ByVal Score As Integer)
+        Dim temp = {RadioButton0, RadioButton1, RadioButton2, RadioButton3, RadioButton4, RadioButton5, RadioButton6, RadioButton7, RadioButton8, RadioButton9, RadioButton10}
+        For i = 0 To 10 'spare button is only not active on bowl 1 or conditionally bowl 2/3 of frame 10
+            If (i >= (10 - Score)) And Not (CurrentFrameBowl = 0) And (Not Score = ValidScores.Spare) Then
+                temp(i).Enabled = False
+            Else
+                temp(i).Enabled = True
+            End If
+        Next
+        'Spare button test
+        'Set to to enabled to remove the uneccesary else statements.
+        RadioButton11.Enabled = True
+        If CurrentFrameBowl = 0 Then
+            RadioButton11.Enabled = False 'spare button
+        End If
+        'Frame 10 spare button
+        If CurrentFrame = 9 Then
+            If SelectPlayer(CurrentPlayer).Frames(9).Scores(0) = "X" Then
+                If CurrentFrameBowl = 1 Then
+                    RadioButton11.Enabled = False
+                End If
+            End If
+            If SelectPlayer(CurrentPlayer).Frames(9).Scores(1) = "X" Then
+                If CurrentFrameBowl = 2 Then
+                    RadioButton11.Enabled = False
+                End If
+            End If
+        End If
     End Sub
 
     Private Sub Form1_KeyUp(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
