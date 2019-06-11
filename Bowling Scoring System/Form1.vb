@@ -34,6 +34,7 @@ Public Class Form1
         RadioButton10,
         RadioButton11}
 
+#Region "Control Flow Module"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PlayerNumDialog.ShowDialog()
         'Then a function to let players input names
@@ -45,7 +46,35 @@ Public Class Form1
             End If
         Next
     End Sub
+    Public Sub AddScore(ByVal Score As Integer)
+        DisplayScores(Score)
+        If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
+            If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
+                CurrentFrameBowl += 1
+                'Not sure if need to have this
+                'DisplayAndUpdateScores(ValidScores.Miss)
+            End If
+        End If
+        CalculateSubtotals()
+        DisplayTotals()
+        UpdatePlayer(CurrentPlayer, Score)
+        'UpdateButtons(Score)
+    End Sub
+    Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
+        CurrentFrameBowl += 1
+        If ((Score = ValidScores.Strike) And (Not (CurrentFrameBowl = 3))) Or (CurrentFrameBowl = 2) Then
+            If Not ((CurrentFrame = 9) And (EarnedFrame10())) Then
+                IncrementNextPlayer()
+            End If
+            CheckFrame()
+        ElseIf Not (CurrentFrameBowl = 1) Then
+            IncrementNextPlayer()
+            CheckFrame()
+        End If
+    End Sub
+#End Region
 
+#Region "Input Module"
     Private Sub EnterScoreButton_Click(sender As Object, e As EventArgs) Handles EnterScoreButton.Click
         If RadioButton0.Checked Then
             AddScore(ValidScores.Miss)
@@ -73,73 +102,16 @@ Public Class Form1
             AddScore(ValidScores.Spare)
         End If
     End Sub
+#End Region
 
-    Public Sub AddScore(ByVal Score As Integer)
-        DisplayAndUpdateScores(Score)
-        If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
-            If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
-                CurrentFrameBowl += 1
-                'Not sure if need to have this
-                'DisplayAndUpdateScores(ValidScores.Miss)
-            End If
-        End If
-        CalculateSubtotals()
-        DisplayAndUpdateTotals()
-        UpdatePlayer(CurrentPlayer, Score)
-        'UpdateButtons(Score)
-    End Sub
-
-    Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
-        CurrentFrameBowl += 1
-        If ((Score = ValidScores.Strike) And (Not (CurrentFrameBowl = 3))) Or (CurrentFrameBowl = 2) Then
-            If Not ((CurrentFrame = 9) And (EarnedFrame10())) Then
-                IncrementNextPlayer()
-            End If
-            CheckFrame()
-        ElseIf Not (CurrentFrameBowl = 1) Then
-            IncrementNextPlayer()
-            CheckFrame()
-        End If
-    End Sub
-    Public Function SelectPlayer(ByVal Player As Integer) As PlayerPanelControl.PlayerPanelControl
-        Select Case Player
-            Case 0
-                Return PlayerPanel1
-            Case 1
-                Return PlayerPanel2
-            Case 2
-                Return PlayerPanel3
-            Case 3
-                Return PlayerPanel4
-        End Select
-    End Function
-    Public Sub IncrementNextPlayer()
-        CurrentFrameBowl = 0
-        CurrentPlayer += 1
-    End Sub
-    Public Sub CheckFrame()
-        If CurrentPlayer >= TotalPlayers Then
-            CurrentPlayer = 0 'Go back to player 1
-            CurrentFrame += 1 'Increment to next frame
-        End If
-        If CurrentFrame > 9 Then 'This should always occur
-            'Game Ended
-            'This will get changed later
-            MessageBox.Show("Player 1 Won", "Game Over")
-        End If
-    End Sub
-    Public Function EarnedFrame10() As Boolean
-        Dim t1 = TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(0)) = ValidScores.Strike
-        Dim t2 = TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(1)) = ValidScores.Spare
-        Return t1 Or t2
-    End Function
-    Public Sub DisplayAndUpdateScores(Score As Integer)
+#Region "Display Module"
+    Public Sub DisplayScores(Score As Integer)
         'We need to do this as the property will not get updated properly if we try to edit the particular score directly
         Dim TempScores = SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores
         TempScores(CurrentFrameBowl) = ScoreToText(Score)
         SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores = TempScores
     End Sub
-    Public Sub DisplayAndUpdateSubTotals(ByVal Subtotal As Integer, Frame As Integer)
+    Public Sub DisplaySubTotals(ByVal Subtotal As Integer, Frame As Integer)
         'Same problem as above
         PreviousSubTotals(Frame) = Subtotal
         'Dim Temp = SelectPlayer(CurrentPlayer).SubTotals
@@ -150,13 +122,16 @@ Public Class Form1
         Temp(Frame) = Subtotal
         SelectPlayer(CurrentPlayer).SubTotals = Temp
     End Sub
-    Public Sub DisplayAndUpdateTotals()
+    Public Sub DisplayTotals()
         Dim total = 0
         For Each score In PreviousSubTotals
             total += score
         Next
         SelectPlayer(CurrentPlayer).TotalScore = total
     End Sub
+#End Region
+
+#Region "Calculation Module"
     Public Sub CalculateSubtotals()
         Dim b1 As Integer
         Dim b2 As Integer
@@ -215,9 +190,10 @@ Public Class Form1
                     Subtotal = b1 + b2
                 End If
             End If
-            DisplayAndUpdateSubTotals(Subtotal, i)
+            DisplaySubTotals(Subtotal, i)
         Next
     End Sub
+#End Region
     Public Sub UpdateButtons(ByVal Score As Integer)
         Dim temp = {RadioButton0, RadioButton1, RadioButton2, RadioButton3, RadioButton4, RadioButton5, RadioButton6, RadioButton7, RadioButton8, RadioButton9, RadioButton10}
         For i = 0 To 10 'spare button is only not active on bowl 1 or conditionally bowl 2/3 of frame 10
@@ -247,6 +223,43 @@ Public Class Form1
             End If
         End If
     End Sub
+
+#Region "Used Functions"
+    Public Function SelectPlayer(ByVal Player As Integer) As PlayerPanelControl.PlayerPanelControl
+        Select Case Player
+            Case 0
+                Return PlayerPanel1
+            Case 1
+                Return PlayerPanel2
+            Case 2
+                Return PlayerPanel3
+            Case 3
+                Return PlayerPanel4
+        End Select
+    End Function
+    Public Sub IncrementNextPlayer()
+        CurrentFrameBowl = 0
+        CurrentPlayer += 1
+    End Sub
+    Public Sub CheckFrame()
+        If CurrentPlayer >= TotalPlayers Then
+            CurrentPlayer = 0 'Go back to player 1
+            CurrentFrame += 1 'Increment to next frame
+        End If
+        If CurrentFrame > 9 Then 'This should always occur
+            'Game Ended
+            'This will get changed later
+            MessageBox.Show("Player 1 Won", "Game Over")
+        End If
+    End Sub
+    Public Function EarnedFrame10() As Boolean
+        Dim t1 = TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(0)) = ValidScores.Strike
+        Dim t2 = TextToScore(SelectPlayer(CurrentPlayer).Frames(9).Scores(1)) = ValidScores.Spare
+        Return t1 Or t2
+    End Function
+
+#End Region
+
 
     Private Sub Form1_KeyUp(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         Select Case e.KeyChar

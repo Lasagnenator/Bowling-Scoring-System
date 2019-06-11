@@ -169,6 +169,7 @@ Partial Class Form1
         'RadioButton11
         '
         Me.RadioButton11.AutoSize = True
+        Me.RadioButton11.Enabled = False
         Me.RadioButton11.Location = New System.Drawing.Point(795, 685)
         Me.RadioButton11.Name = "RadioButton11"
         Me.RadioButton11.Size = New System.Drawing.Size(49, 29)
