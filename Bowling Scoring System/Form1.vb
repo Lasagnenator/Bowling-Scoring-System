@@ -37,6 +37,7 @@ Public Class Form1
         Next
     End Sub
     Public Sub AddScore(ByVal Score As Integer)
+        'SelectPlayer(CurrentPlayer).IsCurrentPlayer = False
         DisplayScores(Score)
         If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
             If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
@@ -49,6 +50,7 @@ Public Class Form1
         DisplayTotals()
         UpdatePlayer(CurrentPlayer, Score)
         UpdateButtons(Score)
+        'SelectPlayer(CurrentPlayer).IsCurrentPlayer = True
     End Sub
     Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
         CurrentBowl += 1

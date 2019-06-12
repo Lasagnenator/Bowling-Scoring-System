@@ -89,6 +89,21 @@ Public Class PlayerPanelControl
         End Set
     End Property
 
+    Private IsCurrentPlayerValue As Boolean
+    Public Property IsCurrentPlayer() As Boolean
+        Get
+            Return IsCurrentPlayerValue
+        End Get
+        Set(ByVal value As Boolean)
+            IsCurrentPlayerValue = value
+            If value Then
+                MainGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            Else
+                MainGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            End If
+        End Set
+    End Property
+
     Private Sub PlayerPanelControl_ControlAdded(sender As Object, e As ControlEventArgs) Handles Me.ControlAdded
         TotalScoreBox.SelectionAlignment = HorizontalAlignment.Center
     End Sub
