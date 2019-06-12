@@ -20,19 +20,6 @@ Public Class Form1
         Strike
         Spare
     End Enum
-    Dim Rb As RadioButton() = {
-        RadioButton0,
-        RadioButton1,
-        RadioButton2,
-        RadioButton3,
-        RadioButton4,
-        RadioButton5,
-        RadioButton6,
-        RadioButton7,
-        RadioButton8,
-        RadioButton9,
-        RadioButton10,
-        RadioButton11}
 
 #Region "Control Flow Module"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -71,6 +58,96 @@ Public Class Form1
             IncrementNextPlayer()
             CheckFrame()
         End If
+    End Sub
+    Public Sub UpdateButtons(ByVal Score As Integer)
+        Dim temp = {RadioButton0, RadioButton1, RadioButton2, RadioButton3, RadioButton4, RadioButton5, RadioButton6, RadioButton7, RadioButton8, RadioButton9, RadioButton10, RadioButton11}
+        'Enable all buttons
+        For Each i In temp
+            i.Enabled = True
+        Next
+        If (CurrentFrameBowl = 0) Or (Score = ValidScores.Strike) Or (Score = ValidScores.Spare) Then
+            'Disable spare
+            RadioButton11.Enabled = False
+        Else
+            'Disable all buttons whose value is >= 10-score
+            For i = 0 To 10
+                If i >= (10 - Score) Then
+                    temp(i).Enabled = False
+                End If
+            Next
+        End If
+    End Sub
+    Private Sub Form1_KeyUp(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        Select Case e.KeyChar
+            Case "-"
+                If Not RadioButton0.Enabled Then
+                    Return
+                End If
+                RadioButton0.Checked = True
+            Case "0"
+                If Not RadioButton0.Enabled Then
+                    Return
+                End If
+                RadioButton0.Checked = True
+            Case "1"
+                If Not RadioButton1.Enabled Then
+                    Return
+                End If
+                RadioButton1.Checked = True
+            Case "2"
+                If Not RadioButton2.Enabled Then
+                    Return
+                End If
+                RadioButton2.Checked = True
+            Case "3"
+                If Not RadioButton3.Enabled Then
+                    Return
+                End If
+                RadioButton3.Checked = True
+            Case "4"
+                If Not RadioButton4.Enabled Then
+                    Return
+                End If
+                RadioButton4.Checked = True
+            Case "5"
+                If Not RadioButton5.Enabled Then
+                    Return
+                End If
+                RadioButton5.Checked = True
+            Case "6"
+                If Not RadioButton6.Enabled Then
+                    Return
+                End If
+                RadioButton6.Checked = True
+            Case "7"
+                If Not RadioButton7.Enabled Then
+                    Return
+                End If
+                RadioButton7.Checked = True
+            Case "8"
+                If Not RadioButton8.Enabled Then
+                    Return
+                End If
+                RadioButton8.Checked = True
+            Case "9"
+                If Not RadioButton9.Enabled Then
+                    Return
+                End If
+                RadioButton9.Checked = True
+            Case "x"
+                If Not RadioButton10.Enabled Then
+                    Return
+                End If
+                RadioButton10.Checked = True
+            Case "/"
+                If Not RadioButton11.Enabled Then
+                    Return
+                End If
+                RadioButton11.Checked = True
+            Case vbCrLf
+                EnterScoreButton_Click(New Object, New EventArgs())
+        End Select
+        Me.Refresh()
     End Sub
 #End Region
 
@@ -194,24 +271,6 @@ Public Class Form1
         Next
     End Sub
 #End Region
-    Public Sub UpdateButtons(ByVal Score As Integer)
-        Dim temp = {RadioButton0, RadioButton1, RadioButton2, RadioButton3, RadioButton4, RadioButton5, RadioButton6, RadioButton7, RadioButton8, RadioButton9, RadioButton10, RadioButton11}
-        'Enable all buttons
-        For Each i In temp
-            i.Enabled = True
-        Next
-        If (CurrentFrameBowl = 0) Or (Score = ValidScores.Strike) Or (Score = ValidScores.Spare) Then
-            'Disable spare
-            RadioButton11.Enabled = False
-        Else
-            'Disable all buttons whose value is >= 10-score
-            For i = 0 To 10
-                If i >= (10 - Score) Then
-                    temp(i).Enabled = False
-                End If
-            Next
-        End If
-    End Sub
 
 #Region "Used Functions"
     Public Function SelectPlayer(ByVal Player As Integer) As PlayerPanelControl.PlayerPanelControl
@@ -249,77 +308,4 @@ Public Class Form1
 
 #End Region
 
-
-    Private Sub Form1_KeyUp(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-        Select Case e.KeyChar
-            Case "-"
-                If Not RadioButton0.Enabled Then
-                    Return
-                End If
-                RadioButton0.Checked = True
-            Case "0"
-                If Not RadioButton0.Enabled Then
-                    Return
-                End If
-                RadioButton0.Checked = True
-            Case "1"
-                If Not RadioButton1.Enabled Then
-                    Return
-                End If
-                RadioButton1.Checked = True
-            Case "2"
-                If Not RadioButton2.Enabled Then
-                    Return
-                End If
-                RadioButton2.Checked = True
-            Case "3"
-                If Not RadioButton3.Enabled Then
-                    Return
-                End If
-                RadioButton3.Checked = True
-            Case "4"
-                If Not RadioButton4.Enabled Then
-                    Return
-                End If
-                RadioButton4.Checked = True
-            Case "5"
-                If Not RadioButton5.Enabled Then
-                    Return
-                End If
-                RadioButton5.Checked = True
-            Case "6"
-                If Not RadioButton6.Enabled Then
-                    Return
-                End If
-                RadioButton6.Checked = True
-            Case "7"
-                If Not RadioButton7.Enabled Then
-                    Return
-                End If
-                RadioButton7.Checked = True
-            Case "8"
-                If Not RadioButton8.Enabled Then
-                    Return
-                End If
-                RadioButton8.Checked = True
-            Case "9"
-                If Not RadioButton9.Enabled Then
-                    Return
-                End If
-                RadioButton9.Checked = True
-            Case "x"
-                If Not RadioButton10.Enabled Then
-                    Return
-                End If
-                RadioButton10.Checked = True
-            Case "/"
-                If Not RadioButton11.Enabled Then
-                    Return
-                End If
-                RadioButton11.Checked = True
-            Case vbCrLf
-                EnterScoreButton_Click(New Object, New EventArgs())
-        End Select
-        Me.Refresh()
-    End Sub
 End Class
