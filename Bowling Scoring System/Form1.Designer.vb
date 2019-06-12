@@ -56,6 +56,7 @@ Partial Class Form1
         '
         Me.RadioButton0.AutoSize = True
         Me.RadioButton0.Checked = True
+        Me.RadioButton0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton0.Location = New System.Drawing.Point(116, 685)
         Me.RadioButton0.Name = "RadioButton0"
         Me.RadioButton0.Size = New System.Drawing.Size(50, 29)
@@ -68,6 +69,7 @@ Partial Class Form1
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton1.Location = New System.Drawing.Point(173, 685)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(55, 29)
@@ -79,6 +81,7 @@ Partial Class Form1
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton2.Location = New System.Drawing.Point(235, 685)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(55, 29)
@@ -89,6 +92,7 @@ Partial Class Form1
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton3.Location = New System.Drawing.Point(297, 685)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(55, 29)
@@ -99,6 +103,7 @@ Partial Class Form1
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton4.Location = New System.Drawing.Point(359, 685)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(55, 29)
@@ -109,6 +114,7 @@ Partial Class Form1
         'RadioButton5
         '
         Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton5.Location = New System.Drawing.Point(421, 685)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(55, 29)
@@ -119,6 +125,7 @@ Partial Class Form1
         'RadioButton6
         '
         Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton6.Location = New System.Drawing.Point(483, 685)
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(55, 29)
@@ -129,6 +136,7 @@ Partial Class Form1
         'RadioButton7
         '
         Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton7.Location = New System.Drawing.Point(545, 685)
         Me.RadioButton7.Name = "RadioButton7"
         Me.RadioButton7.Size = New System.Drawing.Size(55, 29)
@@ -139,6 +147,7 @@ Partial Class Form1
         'RadioButton8
         '
         Me.RadioButton8.AutoSize = True
+        Me.RadioButton8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton8.Location = New System.Drawing.Point(607, 685)
         Me.RadioButton8.Name = "RadioButton8"
         Me.RadioButton8.Size = New System.Drawing.Size(55, 29)
@@ -149,6 +158,7 @@ Partial Class Form1
         'RadioButton9
         '
         Me.RadioButton9.AutoSize = True
+        Me.RadioButton9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton9.Location = New System.Drawing.Point(669, 685)
         Me.RadioButton9.Name = "RadioButton9"
         Me.RadioButton9.Size = New System.Drawing.Size(55, 29)
@@ -159,6 +169,7 @@ Partial Class Form1
         'RadioButton10
         '
         Me.RadioButton10.AutoSize = True
+        Me.RadioButton10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton10.Location = New System.Drawing.Point(731, 685)
         Me.RadioButton10.Name = "RadioButton10"
         Me.RadioButton10.Size = New System.Drawing.Size(57, 29)
@@ -170,6 +181,7 @@ Partial Class Form1
         '
         Me.RadioButton11.AutoSize = True
         Me.RadioButton11.Enabled = False
+        Me.RadioButton11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.RadioButton11.Location = New System.Drawing.Point(795, 685)
         Me.RadioButton11.Name = "RadioButton11"
         Me.RadioButton11.Size = New System.Drawing.Size(49, 29)
@@ -179,6 +191,7 @@ Partial Class Form1
         '
         'EnterScoreButton
         '
+        Me.EnterScoreButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.EnterScoreButton.Location = New System.Drawing.Point(409, 720)
         Me.EnterScoreButton.Name = "EnterScoreButton"
         Me.EnterScoreButton.Size = New System.Drawing.Size(137, 43)
@@ -189,6 +202,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(61, 15)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(24, 25)
@@ -198,6 +212,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(146, 14)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(24, 25)
@@ -207,6 +222,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(234, 15)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(24, 25)
@@ -216,6 +232,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(317, 15)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(24, 25)
@@ -225,6 +242,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(394, 15)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(24, 25)
@@ -234,6 +252,7 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(482, 14)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(24, 25)
@@ -243,6 +262,7 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(566, 15)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(24, 25)
@@ -252,6 +272,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(651, 14)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(24, 25)
@@ -261,6 +282,7 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(735, 14)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(24, 25)
@@ -270,6 +292,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label10.Location = New System.Drawing.Point(818, 15)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(36, 25)
@@ -279,6 +302,7 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label11.Location = New System.Drawing.Point(886, 14)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 25)
@@ -287,6 +311,7 @@ Partial Class Form1
         '
         'PlayerPanel4
         '
+        Me.PlayerPanel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.PlayerPanel4.Location = New System.Drawing.Point(12, 510)
         Me.PlayerPanel4.Name = "PlayerPanel4"
         Me.PlayerPanel4.PlayerName = "Player 4"
@@ -298,6 +323,7 @@ Partial Class Form1
         '
         'PlayerPanel3
         '
+        Me.PlayerPanel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.PlayerPanel3.Location = New System.Drawing.Point(12, 349)
         Me.PlayerPanel3.Name = "PlayerPanel3"
         Me.PlayerPanel3.PlayerName = "Player 3"
@@ -309,6 +335,7 @@ Partial Class Form1
         '
         'PlayerPanel2
         '
+        Me.PlayerPanel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.PlayerPanel2.Location = New System.Drawing.Point(12, 188)
         Me.PlayerPanel2.Name = "PlayerPanel2"
         Me.PlayerPanel2.PlayerName = "Player 2"
@@ -320,6 +347,7 @@ Partial Class Form1
         '
         'PlayerPanel1
         '
+        Me.PlayerPanel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.PlayerPanel1.Location = New System.Drawing.Point(12, 27)
         Me.PlayerPanel1.Name = "PlayerPanel1"
         Me.PlayerPanel1.PlayerName = "Player 1"
@@ -333,6 +361,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1022, 775)
         Me.Controls.Add(Me.PlayerPanel4)
         Me.Controls.Add(Me.PlayerPanel3)
@@ -362,6 +391,7 @@ Partial Class Form1
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.RadioButton0)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
         Me.MaximizeBox = False

@@ -51,4 +51,32 @@
             ReDim ScoresValue(2)
         End If
     End Sub
+
+    Private EvenTileValue As Boolean = False
+    Public Property EvenTile() As Boolean
+        Get
+            Return EvenTileValue
+        End Get
+        Set(ByVal value As Boolean)
+            EvenTileValue = value
+            UpdateColour()
+        End Set
+    End Property
+    Public Sub UpdateColour()
+        Dim Odd = Color.FromArgb(80, 94, 103)
+        Dim Even = Color.FromArgb(133, 162, 166)
+        If EvenTileValue Then
+            Bowl1.BackColor = Even
+            Bowl2.BackColor = Even
+            Bowl3.BackColor = Even
+            SubTotalBox.BackColor = Even
+            Me.BackColor = Even
+        Else
+            Bowl1.BackColor = Odd
+            SubTotalBox.BackColor = Odd
+            Bowl2.BackColor = Odd
+            Bowl3.BackColor = Odd
+            Me.BackColor = Odd
+        End If
+    End Sub
 End Class

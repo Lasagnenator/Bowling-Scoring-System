@@ -31,6 +31,7 @@ Partial Class SingleFrame
         'Bowl2
         '
         Me.Bowl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Bowl2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Bowl2.Location = New System.Drawing.Point(35, 0)
         Me.Bowl2.Name = "Bowl2"
         Me.Bowl2.ReadOnly = True
@@ -42,7 +43,9 @@ Partial Class SingleFrame
         '
         'Bowl1
         '
+        Me.Bowl1.BackColor = System.Drawing.SystemColors.Control
         Me.Bowl1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Bowl1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Bowl1.Location = New System.Drawing.Point(-1, 3)
         Me.Bowl1.Name = "Bowl1"
         Me.Bowl1.ReadOnly = True
@@ -53,7 +56,9 @@ Partial Class SingleFrame
         '
         'SubTotalBox
         '
+        Me.SubTotalBox.BackColor = System.Drawing.SystemColors.Control
         Me.SubTotalBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SubTotalBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.SubTotalBox.Location = New System.Drawing.Point(35, 49)
         Me.SubTotalBox.Name = "SubTotalBox"
         Me.SubTotalBox.ReadOnly = True
@@ -65,6 +70,7 @@ Partial Class SingleFrame
         'Bowl3
         '
         Me.Bowl3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Bowl3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Bowl3.Location = New System.Drawing.Point(57, 0)
         Me.Bowl3.Name = "Bowl3"
         Me.Bowl3.ReadOnly = True
@@ -76,6 +82,7 @@ Partial Class SingleFrame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Controls.Add(Me.Bowl3)
         Me.Controls.Add(Me.Bowl2)
