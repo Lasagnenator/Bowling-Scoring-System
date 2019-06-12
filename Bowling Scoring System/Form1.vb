@@ -78,6 +78,10 @@ Public Class Form1
             For i = 0 To 10
                 If i >= (10 - Score) Then
                     temp(i).Enabled = False
+                    'If current selected button gets disabled, select the miss button instead
+                    If GetInputButtons(i).Checked Then
+                        RadioButton0.Checked = True
+                    End If
                 End If
             Next
         End If
@@ -154,6 +158,36 @@ Public Class Form1
         End Select
         Me.Refresh()
     End Sub
+
+    Public Function GetInputButtons(index As Integer) As RadioButton
+        Select Case index
+            Case 0
+                Return RadioButton0
+            Case 1
+                Return RadioButton1
+            Case 2
+                Return RadioButton2
+            Case 3
+                Return RadioButton3
+            Case 4
+                Return RadioButton4
+            Case 5
+                Return RadioButton5
+            Case 6
+                Return RadioButton6
+            Case 7
+                Return RadioButton7
+            Case 8
+                Return RadioButton8
+            Case 9
+                Return RadioButton9
+            Case 10
+                Return RadioButton10
+            Case 11
+                Return RadioButton11
+        End Select
+    End Function
+
 #End Region
 
 #Region "Input Module"
