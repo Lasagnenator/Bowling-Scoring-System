@@ -158,7 +158,6 @@ Public Class Form1
         End Select
         Me.Refresh()
     End Sub
-
     Public Function GetInputButtons(index As Integer) As RadioButton
         Select Case index
             Case 0
