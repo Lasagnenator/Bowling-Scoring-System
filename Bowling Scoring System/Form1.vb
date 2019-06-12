@@ -4,7 +4,7 @@ Public Class Form1
     Public CurrentPlayer As Integer = 0
     Public TotalPlayers As Integer
     Public CurrentFrame As Integer = 0 'Current frame number
-    Public CurrentFrameBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
+    Public CurrentBowl As Integer = 0 '0, 1, 2 for the current bowl in a frame
     Public PreviousSubTotals As Integer() = New Integer(9) {}
     Public Enum ValidScores
         Miss
@@ -24,7 +24,10 @@ Public Class Form1
 #Region "Control Flow Module"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PlayerNumDialog.ShowDialog()
-        'Then a function to let players input names
+        PlayerNameDialog.ShowDialog()
+        CurrentPlayer = 0
+        CurrentFrame = 0
+        CurrentBowl = 0
     End Sub
     Public Sub MakePanels(ByVal num As Integer)
         For i = 0 To 3
@@ -37,7 +40,7 @@ Public Class Form1
         DisplayScores(Score)
         If Score = ValidScores.Strike Then 'You got a strike so you don't need the second bowl unless frame 10
             If Not CurrentFrame = 9 Then 'Simulate the player taking a miss next bowl automatically.
-                CurrentFrameBowl += 1
+                CurrentBowl += 1
                 'Not sure if need to have this
                 'DisplayAndUpdateScores(ValidScores.Miss)
             End If
@@ -48,13 +51,13 @@ Public Class Form1
         UpdateButtons(Score)
     End Sub
     Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
-        CurrentFrameBowl += 1
-        If ((Score = ValidScores.Strike) And (Not (CurrentFrameBowl = 3))) Or (CurrentFrameBowl = 2) Then
+        CurrentBowl += 1
+        If ((Score = ValidScores.Strike) And (Not (CurrentBowl = 3))) Or (CurrentBowl = 2) Then
             If Not ((CurrentFrame = 9) And (EarnedFrame10())) Then
                 IncrementNextPlayer()
             End If
             CheckFrame()
-        ElseIf Not (CurrentFrameBowl = 1) Then
+        ElseIf Not (CurrentBowl = 1) Then
             IncrementNextPlayer()
             CheckFrame()
         End If
@@ -65,7 +68,7 @@ Public Class Form1
         For Each i In temp
             i.Enabled = True
         Next
-        If (CurrentFrameBowl = 0) Or (Score = ValidScores.Strike) Or (Score = ValidScores.Spare) Then
+        If (CurrentBowl = 0) Or (Score = ValidScores.Strike) Or (Score = ValidScores.Spare) Then
             'Disable spare
             RadioButton11.Enabled = False
         Else
@@ -185,13 +188,13 @@ Public Class Form1
     Public Sub DisplayScores(Score As Integer)
         'We need to do this as the property will not get updated properly if we try to edit the particular score directly
         Dim TempScores = SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores
-        TempScores(CurrentFrameBowl) = ScoreToText(Score)
+        TempScores(CurrentBowl) = ScoreToText(Score)
         SelectPlayer(CurrentPlayer).Frames(CurrentFrame).Scores = TempScores
     End Sub
     Public Sub DisplaySubTotals(ByVal Subtotal As Integer, Frame As Integer)
         'Same problem as above
+        'We calculate the running totals because it's easy
         PreviousSubTotals(Frame) = Subtotal
-        'Dim Temp = SelectPlayer(CurrentPlayer).SubTotals
         Dim Temp = SelectPlayer(CurrentPlayer).SubTotals
         For i = 0 To Frame - 1
             Subtotal += PreviousSubTotals(i)
@@ -245,6 +248,8 @@ Public Class Form1
             If i = 9 Then 'bowl 1 in frame 10
                 If ((b1 = b2) And (b2 = ValidScores.Strike)) Then 'b1=b2=strike
                     Subtotal = b1 + (2 * b2) + (3 * b3)
+                ElseIf (b1 = ValidScores.Strike) And (b3 = ValidScores.Spare) Then
+                    Subtotal = b1 + 20
                 ElseIf b1 = ValidScores.Strike Then 'b1=strike
                     Subtotal = b1 + (2 * (b2 + b3))
                 ElseIf b2 = ValidScores.Spare Then 'b2=spare
@@ -286,7 +291,7 @@ Public Class Form1
         End Select
     End Function
     Public Sub IncrementNextPlayer()
-        CurrentFrameBowl = 0
+        CurrentBowl = 0
         CurrentPlayer += 1
     End Sub
     Public Sub CheckFrame()

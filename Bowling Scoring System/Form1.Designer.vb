@@ -46,10 +46,10 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.PlayerPanel4 = New PlayerPanelControl.PlayerPanelControl()
-        Me.PlayerPanel3 = New PlayerPanelControl.PlayerPanelControl()
-        Me.PlayerPanel2 = New PlayerPanelControl.PlayerPanelControl()
         Me.PlayerPanel1 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel2 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel3 = New PlayerPanelControl.PlayerPanelControl()
+        Me.PlayerPanel4 = New PlayerPanelControl.PlayerPanelControl()
         Me.SuspendLayout()
         '
         'RadioButton0
@@ -309,53 +309,54 @@ Partial Class Form1
         Me.Label11.TabIndex = 27
         Me.Label11.Text = "Total"
         '
-        'PlayerPanel4
+        'PlayerPanel1
         '
-        Me.PlayerPanel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.PlayerPanel4.Location = New System.Drawing.Point(12, 510)
-        Me.PlayerPanel4.Name = "PlayerPanel4"
-        Me.PlayerPanel4.PlayerName = "Player 4"
-        Me.PlayerPanel4.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel4.Size = New System.Drawing.Size(998, 151)
-        Me.PlayerPanel4.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel4.TabIndex = 30
-        Me.PlayerPanel4.TotalScore = 0
-        '
-        'PlayerPanel3
-        '
-        Me.PlayerPanel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.PlayerPanel3.Location = New System.Drawing.Point(12, 349)
-        Me.PlayerPanel3.Name = "PlayerPanel3"
-        Me.PlayerPanel3.PlayerName = "Player 3"
-        Me.PlayerPanel3.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel3.Size = New System.Drawing.Size(998, 151)
-        Me.PlayerPanel3.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel3.TabIndex = 29
-        Me.PlayerPanel3.TotalScore = 0
+        Me.PlayerPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PlayerPanel1.Location = New System.Drawing.Point(27, 43)
+        Me.PlayerPanel1.Name = "PlayerPanel1"
+        Me.PlayerPanel1.PlayerName = "Player 1"
+        Me.PlayerPanel1.Scores = New String() {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+        Me.PlayerPanel1.Size = New System.Drawing.Size(966, 180)
+        Me.PlayerPanel1.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel1.TabIndex = 28
+        Me.PlayerPanel1.TotalScore = 0
         '
         'PlayerPanel2
         '
-        Me.PlayerPanel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.PlayerPanel2.Location = New System.Drawing.Point(12, 188)
+        Me.PlayerPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PlayerPanel2.Location = New System.Drawing.Point(27, 193)
         Me.PlayerPanel2.Name = "PlayerPanel2"
         Me.PlayerPanel2.PlayerName = "Player 2"
-        Me.PlayerPanel2.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel2.Size = New System.Drawing.Size(998, 151)
+        Me.PlayerPanel2.Scores = New String() {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+        Me.PlayerPanel2.Size = New System.Drawing.Size(966, 180)
         Me.PlayerPanel2.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel2.TabIndex = 28
+        Me.PlayerPanel2.TabIndex = 29
         Me.PlayerPanel2.TotalScore = 0
         '
-        'PlayerPanel1
+        'PlayerPanel3
         '
-        Me.PlayerPanel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.PlayerPanel1.Location = New System.Drawing.Point(12, 27)
-        Me.PlayerPanel1.Name = "PlayerPanel1"
-        Me.PlayerPanel1.PlayerName = "Player 1"
-        Me.PlayerPanel1.Scores = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel1.Size = New System.Drawing.Size(998, 151)
-        Me.PlayerPanel1.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
-        Me.PlayerPanel1.TabIndex = 15
-        Me.PlayerPanel1.TotalScore = 0
+        Me.PlayerPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PlayerPanel3.Location = New System.Drawing.Point(27, 342)
+        Me.PlayerPanel3.Name = "PlayerPanel3"
+        Me.PlayerPanel3.PlayerName = "Player 3"
+        Me.PlayerPanel3.Scores = New String() {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+        Me.PlayerPanel3.Size = New System.Drawing.Size(966, 180)
+        Me.PlayerPanel3.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel3.TabIndex = 30
+        Me.PlayerPanel3.TotalScore = 0
+        '
+        'PlayerPanel4
+        '
+        Me.PlayerPanel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PlayerPanel4.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.PlayerPanel4.Location = New System.Drawing.Point(27, 499)
+        Me.PlayerPanel4.Name = "PlayerPanel4"
+        Me.PlayerPanel4.PlayerName = "Player 4"
+        Me.PlayerPanel4.Scores = New String() {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+        Me.PlayerPanel4.Size = New System.Drawing.Size(966, 180)
+        Me.PlayerPanel4.SubTotals = New String() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
+        Me.PlayerPanel4.TabIndex = 31
+        Me.PlayerPanel4.TotalScore = 0
         '
         'Form1
         '
@@ -366,6 +367,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PlayerPanel4)
         Me.Controls.Add(Me.PlayerPanel3)
         Me.Controls.Add(Me.PlayerPanel2)
+        Me.Controls.Add(Me.PlayerPanel1)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -377,7 +379,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PlayerPanel1)
         Me.Controls.Add(Me.EnterScoreButton)
         Me.Controls.Add(Me.RadioButton11)
         Me.Controls.Add(Me.RadioButton10)
@@ -391,7 +392,6 @@ Partial Class Form1
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.RadioButton0)
-        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
         Me.MaximizeBox = False
@@ -415,7 +415,6 @@ Partial Class Form1
     Friend WithEvents RadioButton10 As RadioButton
     Friend WithEvents RadioButton11 As RadioButton
     Friend WithEvents EnterScoreButton As Button
-    Friend WithEvents PlayerPanel1 As PlayerPanelControl.PlayerPanelControl
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
@@ -427,6 +426,7 @@ Partial Class Form1
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents PlayerPanel1 As PlayerPanelControl.PlayerPanelControl
     Friend WithEvents PlayerPanel2 As PlayerPanelControl.PlayerPanelControl
     Friend WithEvents PlayerPanel3 As PlayerPanelControl.PlayerPanelControl
     Friend WithEvents PlayerPanel4 As PlayerPanelControl.PlayerPanelControl

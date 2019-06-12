@@ -10,6 +10,7 @@ Public Class PlayerNumDialog
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
         Form1.MakePanels(PlayerNumbers.SelectedIndex + 1)
         Form1.TotalPlayers = PlayerNumbers.SelectedIndex + 1
+        PlayerNameDialog.P1NameBox.Visible = False
         Me.Close()
     End Sub
 

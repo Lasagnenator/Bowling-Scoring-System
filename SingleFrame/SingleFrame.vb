@@ -39,6 +39,7 @@
         Bowl2.SelectionAlignment = HorizontalAlignment.Left
         Bowl3.SelectionAlignment = HorizontalAlignment.Center
         SubTotalBox.SelectionAlignment = HorizontalAlignment.Center
+        UpdateColour()
     End Sub
     Private Sub UpdateFrame10(ByVal value As Boolean)
         If value = False Then 'Remove bowl 3 part
@@ -71,12 +72,22 @@
             Bowl3.BackColor = Even
             SubTotalBox.BackColor = Even
             Me.BackColor = Even
+            Bowl1.ForeColor = Color.FromArgb(22, 32, 42)
+            Bowl2.ForeColor = Color.FromArgb(22, 32, 42)
+            Bowl3.ForeColor = Color.FromArgb(22, 32, 42)
+            SubTotalBox.ForeColor = Color.FromArgb(22, 32, 42)
         Else
             Bowl1.BackColor = Odd
             SubTotalBox.BackColor = Odd
             Bowl2.BackColor = Odd
             Bowl3.BackColor = Odd
             Me.BackColor = Odd
+            'Me.ForeColor = Color.FromArgb(237, 255, 255)
+            Bowl1.ForeColor = Color.FromArgb(237, 255, 255)
+            Bowl2.ForeColor = Color.FromArgb(237, 255, 255)
+            Bowl3.ForeColor = Color.FromArgb(237, 255, 255)
+            SubTotalBox.ForeColor = Color.FromArgb(237, 255, 255)
         End If
     End Sub
+
 End Class

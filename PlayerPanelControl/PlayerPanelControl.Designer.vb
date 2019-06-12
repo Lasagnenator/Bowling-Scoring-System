@@ -101,6 +101,7 @@ Partial Class PlayerPanelControl
         Me.F1.BackColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.F1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F1.EvenTile = True
+        Me.F1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.F1.IsFrame10Visible = False
         Me.F1.Location = New System.Drawing.Point(3, 3)
         Me.F1.Name = "F1"
@@ -114,6 +115,7 @@ Partial Class PlayerPanelControl
         Me.F2.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.F2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F2.EvenTile = False
+        Me.F2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.F2.IsFrame10Visible = False
         Me.F2.Location = New System.Drawing.Point(87, 3)
         Me.F2.Name = "F2"
@@ -127,6 +129,7 @@ Partial Class PlayerPanelControl
         Me.F3.BackColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.F3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F3.EvenTile = True
+        Me.F3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.F3.IsFrame10Visible = False
         Me.F3.Location = New System.Drawing.Point(171, 3)
         Me.F3.Name = "F3"
@@ -140,6 +143,7 @@ Partial Class PlayerPanelControl
         Me.F4.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.F4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F4.EvenTile = False
+        Me.F4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.F4.IsFrame10Visible = False
         Me.F4.Location = New System.Drawing.Point(255, 3)
         Me.F4.Name = "F4"
@@ -153,6 +157,7 @@ Partial Class PlayerPanelControl
         Me.F5.BackColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.F5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F5.EvenTile = True
+        Me.F5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.F5.IsFrame10Visible = False
         Me.F5.Location = New System.Drawing.Point(339, 3)
         Me.F5.Name = "F5"
@@ -166,6 +171,7 @@ Partial Class PlayerPanelControl
         Me.F6.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.F6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F6.EvenTile = False
+        Me.F6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.F6.IsFrame10Visible = False
         Me.F6.Location = New System.Drawing.Point(423, 3)
         Me.F6.Name = "F6"
@@ -179,6 +185,7 @@ Partial Class PlayerPanelControl
         Me.F7.BackColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.F7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F7.EvenTile = True
+        Me.F7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.F7.IsFrame10Visible = False
         Me.F7.Location = New System.Drawing.Point(507, 3)
         Me.F7.Name = "F7"
@@ -192,6 +199,7 @@ Partial Class PlayerPanelControl
         Me.F8.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.F8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F8.EvenTile = False
+        Me.F8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.F8.IsFrame10Visible = False
         Me.F8.Location = New System.Drawing.Point(591, 3)
         Me.F8.Name = "F8"
@@ -205,6 +213,7 @@ Partial Class PlayerPanelControl
         Me.F9.BackColor = System.Drawing.Color.FromArgb(CType(CType(133, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.F9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F9.EvenTile = True
+        Me.F9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.F9.IsFrame10Visible = False
         Me.F9.Location = New System.Drawing.Point(675, 3)
         Me.F9.Name = "F9"
@@ -218,6 +227,7 @@ Partial Class PlayerPanelControl
         Me.F10.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(94, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.F10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.F10.EvenTile = False
+        Me.F10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.F10.IsFrame10Visible = True
         Me.F10.Location = New System.Drawing.Point(759, 3)
         Me.F10.Name = "F10"
@@ -232,6 +242,7 @@ Partial Class PlayerPanelControl
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Controls.Add(Me.MainGroupBox)
+        Me.ForeColor = System.Drawing.Color.Transparent
         Me.Name = "PlayerPanelControl"
         Me.Size = New System.Drawing.Size(966, 180)
         Me.MainGroupBox.ResumeLayout(False)
