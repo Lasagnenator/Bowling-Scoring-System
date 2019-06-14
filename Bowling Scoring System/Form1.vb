@@ -50,6 +50,7 @@ Public Class Form1
         DisplayTotals()
         UpdatePlayer(CurrentPlayer, Score)
         UpdateButtons(Score)
+        CheckFrame()
         'SelectPlayer(CurrentPlayer).IsCurrentPlayer = True
     End Sub
     Public Sub UpdatePlayer(ByVal Player As Integer, ByVal Score As Integer)
@@ -58,10 +59,8 @@ Public Class Form1
             If Not ((CurrentFrame = 9) And (EarnedFrame10())) Then
                 IncrementNextPlayer()
             End If
-            CheckFrame()
         ElseIf Not (CurrentBowl = 1) Then
             IncrementNextPlayer()
-            CheckFrame()
         End If
     End Sub
     Public Sub UpdateButtons(ByVal Score As Integer)
@@ -335,6 +334,12 @@ Public Class Form1
             CurrentFrame += 1 'Increment to next frame
         End If
         If CurrentFrame > 9 Then 'This should always occur
+            For i = 0 To 11
+                GetInputButtons(i).Enabled = False
+                If GetInputButtons(i).Checked Then
+                    GetInputButtons(i).Checked = False
+                End If
+            Next
             'Game Ended
             'This will get changed later
             MessageBox.Show("Player 1 Won", "Game Over")
